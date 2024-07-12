@@ -1,0 +1,140 @@
+[
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c0"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/cruise-logo-3.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img1.jpg",
+        "ship_price": "$124",
+        "ship_desription": [
+            {
+                "title": "Our Carnival Exclusive",
+                "text": "Up to $75 to Spend on Board"
+            },
+            {
+                "title": "Early Saver Sale",
+                "text": "Up to 40% Savings + $50 to Spend on Board"
+            },
+            {
+                "title": "Military Bonus",
+                "text": "Limited-Time Reduced Rates"
+            }
+        ],
+        "ship_name": "Carnival Cruise Line"
+    },
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c1"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/cruise-logo-2.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img2.jpg",
+        "ship_price": "$134",
+        "ship_desription": [
+            {
+                "title": "Our Royal Exclusive",
+                "text": "Free Specialty Dinner for 2"
+            },
+            {
+                "title": "Our Royal Exclusive",
+                "text": "Up to $100 to Spend on Board"
+            },
+            {
+                "title": "Buzzer Beater",
+                "text": "Up to $550 Instant Savings"
+            }
+        ],
+        "ship_name": "Royal Caribbean"
+    },
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c2"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/cruise-logo-1.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img3.jpg",
+        "ship_price": "$724",
+        "ship_desription": [
+            {
+                "title": "Our Norwegian Exclusive",
+                "text": "Up to to $200 to Spend on Board"
+            },
+            {
+                "title": "Father's Day Sale",
+                "text": "35% Off All Cruises+ All the Free at Sea Offers(Like Free Drinks)"
+            },
+            {
+                "title": "Military Bonus",
+                "text": "10% Savings"
+            }
+        ],
+        "ship_name": "Norwegian Cruise"
+    },
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c3"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/cruise-logo-4.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img4.jpg",
+        "ship_price": "$355",
+        "ship_desription": [
+            {
+                "title": "Our Holland America Exclusive",
+                "text": "Gratuities Included for 2"
+            },
+            {
+                "title": "Our Holland America Exclusive",
+                "text": "Up to $150 to Spend on Board"
+            },
+            {
+                "title": "Summer Savings Event",
+                "text": "Up to 40% Savings, $100 to Spend on Board & More"
+            }
+        ],
+        "ship_name": "Holland America Line"
+    },
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c4"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/cruise-logo-5.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img5.jpg",
+        "ship_price": "$512",
+        "ship_desription": [
+            {
+                "title": "Our Princess Exclusive",
+                "text": "Up to $100 to Spend on Board"
+            },
+            {
+                "title": "Limited-Time Offer",
+                "text": "Up to 35% Off, Free Upgrades & More"
+            },
+            {
+                "title": "Limited-Time Offer",
+                "text": "Up to 35% Off + 3rd & 4th Guests Sail Free"
+            }
+        ],
+        "ship_name": "Princess Cruise"
+    },
+    {
+        "_id": {
+            "$oid": "6687ff549aa992bf59aea1c5"
+        },
+        "ship_logo": "images/cruise_ship/cruise_logo/celebrity.jpg",
+        "ship_image": "images/cruise_ship/top_cruise_img6.jpg",
+        "ship_price": "$333",
+        "ship_desription": [
+            {
+                "title": "Our Celebrity Exclusive",
+                "text": "Drinks, Wi-Fi & Gratuities Included"
+            },
+            {
+                "title": "Our Celebrity Exclusive",
+                "text": "Up to $150 to Spend on Board"
+            },
+            {
+                "title": "Limited-Time offer",
+                "text": "up to 75% Off 2nd Guests + 3rd, 4th & 5th Guests Sail Free"
+            }
+        ],
+        "ship_name": "Celebrity Cruise"
+    }
+]
