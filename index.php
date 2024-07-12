@@ -167,7 +167,8 @@ $num = mt_rand(100000, 999999);
                                                     name="destination" required=""
                                                     oninvalid="this.setCustomValidity('Please select a destination.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" disabled selected></option>
+                                                    <option value="" selected disabled></option>
+                                                    <option value="Destination (Any)">Destination (Any)</option>
                                                     <?php foreach ($destinationData as $destination): ?>
                                                         <option class="" value="<?php echo $destination; ?>">
                                                             <?php echo $destination; ?>
@@ -188,7 +189,8 @@ $num = mt_rand(100000, 999999);
                                                     name="cruise-length" required=""
                                                     oninvalid="this.setCustomValidity('Please select a cruise length.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" disabled selected></option>
+                                                    <option value="" selected disabled></option>
+                                                    <option value="Cruise Length (Any)">Cruise Length (Any)</option>
                                                     <?php foreach ($cruiseLengthData as $cruiseLength): ?>
                                                         <option value="<?php echo $cruiseLength; ?>">
                                                             <?php echo $cruiseLength; ?>
@@ -233,9 +235,10 @@ $num = mt_rand(100000, 999999);
                                                     name="cruise-line" required=""
                                                     oninvalid="this.setCustomValidity('Please select a cruise line.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" disabled selected></option>
+                                                    <option value="" selected disabled></option>
+                                                    <option value="Cruise Line (Any)">Cruise Line (Any)</option>
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
-                                                        <option value="<?php echo $cruiseshipLineData->cruisename; ?>">
+                                                        <option value="<?php  echo $cruiseshipLineData->cruisename; ?>">
                                                             <?php echo $cruiseshipLineData->cruisename; ?>
                                                         </option>
                                                     <?php endforeach; ?>
@@ -257,7 +260,8 @@ $num = mt_rand(100000, 999999);
                                                     name="cruise-ship" required=""
                                                     oninvalid="this.setCustomValidity('Please select a cruise ship.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" disabled selected></option>
+                                                    <option value="" selected disabled></option>
+                                                    <!-- <option value="Cruise Ship (Any)" >Cruise Ship (Any)</option> -->
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
                                                         <?php foreach ($cruiseshipLineData->cruiseShips as $cruiseShips): ?>
                                                             <option value="<?php echo $cruiseShips->shipname; ?>">
@@ -281,7 +285,8 @@ $num = mt_rand(100000, 999999);
                                                     name="departure-port" required=""
                                                     oninvalid="this.setCustomValidity('Please select a departure port.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" disabled selected></option>
+                                                    <option value="" selected disabled></option>
+                                                    <option value="Departure Ports(Any)">Departure Ports(Any)</option>
                                                     <?php foreach ($departure_portsData as $departurePorts): ?>
                                                         <option class="" value="<?php echo $departurePorts; ?>">
                                                             <?php echo $departurePorts; ?>
@@ -695,7 +700,8 @@ $num = mt_rand(100000, 999999);
             var selectedCruiseData = cruisedata.find(function (cruise) {
                 return cruise.cruisename === selectedCruise;
             });
-            $("#cruise-ship").append('<option value="" selected>Any</option>')
+            $("#cruise-ship").append('<option value=""></option>')
+            $("#cruise-ship").append('<option value="Cruise Ship (Any)">Cruise Ship (Any)</option>')
             if (selectedCruiseData) {
                 selectedCruiseData.cruiseShips.forEach(function (ship) {
                     $("#cruise-ship").append(
@@ -704,6 +710,9 @@ $num = mt_rand(100000, 999999);
                 });
             }
         });
+        
+
+
     </script>
     <!-- <script src="js/guru-new.js"></script> -->
 </body>

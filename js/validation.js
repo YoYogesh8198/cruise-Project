@@ -345,11 +345,13 @@ $(document).ready(function () {
       $("#depart_date").css("border", "1px solid red");
       ErrorMsg = true;
       return;
-    } else if (depart_date) {
+    } else {
       $("#depart").val(depart_date.slice(0, 10));
       $("#return").val(depart_date.slice(13));
       $("#depart_date").css("border", "1px solid #ced4da");
     }
+
+
     if (cruise_line == "" || cruise_line == null || cruise_line == undefined) {
       $("#cruise-line").css("border", "1px solid red");
       ErrorMsg = true;
@@ -380,6 +382,7 @@ $(document).ready(function () {
     e.preventDefault();
     e.stopPropagation();
     if (!ErrorMsg) {
+      
       $("#submit1").hide();
       $("#loading").show();
 

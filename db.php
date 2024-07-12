@@ -40,7 +40,7 @@ $results['popularDestination'] = $popularDestination_a->toArray();
 $results['departPortGreatCruise'] = $departPortGreatCruise_a->toArray();
 $results['findBestCruiseQA'] = $findBestCruiseQA_a->toArray();
 $results['details'] = $details_a;
-// var_dump($results['details']);
+// var_dump($results['cruiseshipLineData']->cruisename);
 
 $destinationData = $results['destination']->destination;
 $cruiseLengthData = $results['cruiseLength']->cruiseLength;
