@@ -1,0 +1,155 @@
+https://designwithpc.com/Plugins/ddSlick#demo
+<div class="form-group col-md-6 form-floating">
+                                                <select class="floating-select form-select input-sm" id="cruise-line"
+                                                    name="cruise-line" required=""
+                                                    oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                    oninput="setCustomValidity('')">
+                                                    <option value="" selected disabled></option>
+                                                    <option value="Cruise Line (Any)">Cruise Line (Any)</option>
+                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option
+                                                            value="<?php echo htmlspecialchars($cruiseshipLineData->cruisename); ?>">
+                                                            <?php echo htmlspecialchars($cruiseshipLineData->cruisename); ?>
+                                                            <?php if (isset($cruiseshipLineData->cruiselogo)): ?>
+                                                                <img src="<?php echo $cruiseshipLineData->cruiselogo; ?>"
+                                                                    alt="<?php echo $cruiseshipLineData->cruisename; ?>"
+                                                                    style="width: 30px; height: auto;">
+                                                            <?php endif; ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                                <div class="new_label">
+                                                    <label for="cruise-line">Cruise Line (Any)</label>
+                                                </div>
+                                                <div class="invalid-tooltip top-arrow error_8" style="display: none;">
+                                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                                    Please select a cruise line.
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                            <div class="form-group col-md-6 form-floating">
+                                                <select class="vodiapicker floating-select form-select input-sm"
+                                                    id="cruise-line" name="cruise-line" required=""
+                                                    oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                    oninput="setCustomValidity('')">
+                                                    <option data-thumbnail="" value="" selected disabled></option>
+                                                    <option value="Cruise Line (Any)">Cruise Line (Any)</option>
+                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option value="<?php echo $cruiseshipLineData->cruisename ?>"
+                                                            class="test"
+                                                            data-thumbnail="<?php echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php echo $cruiseshipLineData->cruisename ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+
+                                                    <div class="new_label">
+                                                        <label>Cruise Line (Any)</label>
+                                                    </div>
+                                                    <div class="invalid-tooltip top-arrow error_8"
+                                                        style="display: none;">
+                                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                                        Please select a cruise line.
+                                                    </div>
+                                                </select>
+
+                                                <div class="lang-select">
+                                                    <button class="btn-select" value=""></button>
+                                                    <div class="b">
+                                                        <ul id="a"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+                                            
+                                            <!-- <div class="form-group col-md-6 form-floating">
+                                                <select class="vodiapicker floating-select form-select input-sm"
+                                                    id="cruise-line" name="cruise-line" required=""
+                                                    oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                    oninput="setCustomValidity('')">
+                                                    <option data-thumbnail="" value="" selected disabled></option>
+                                                    <option value="Cruise Line (Any)">Cruise Line (Any)</option>
+                                                    <?php // foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option value="<?php // echo $cruiseshipLineData->cruisename ?>" class="test"
+                                                            data-thumbnail="<?php // echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php // echo $cruiseshipLineData->cruisename ?>
+                                                        </option>
+                                                    <?php // endforeach; ?>
+                                                    <div class="new_label">
+                                                        <label>Cruise Line (Any)</label>
+                                                    </div>
+                                                    <div class="invalid-tooltip top-arrow error_8"
+                                                        style="display: none;">
+                                                        <i class="fa-solid fa-triangle-exclamation"></i>
+                                                        Please select a cruise line.
+                                                    </div>
+                                                </select>
+
+                                                <div class="lang-select">
+                                                    <button class="btn-select" value=""></button>
+                                                    <div class="b">
+                                                        <ul id="a"></ul>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            ==================================
+
+                                            <div class="form-group col-md-6 form-floating">
+                                                <select class=" floating-select form-select input-sm vodiapicker "
+                                                     >
+                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option value="<?php echo $cruiseshipLineData->cruisename ?>"
+                                                            class="test"
+                                                            data-thumbnail="<?php echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php echo $cruiseshipLineData->cruisename ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                                <div class="new_label">
+                                                    <label>Cruise Line (Any)</label>
+                                                </div>
+                                                <div class="">
+                                                    <input class="btn-select form-select input-sm input-sm2 m-0"
+                                                    id="cruise-line" name="cruise-line" required=""
+                                                    oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                    oninput="setCustomValidity('')">
+
+                                                    <div class="b">
+                                                        <ul id="a"></ul>
+                                                    </div>
+                                                </div>
+                                            </div>

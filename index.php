@@ -59,6 +59,10 @@ $num = mt_rand(100000, 999999);
     <link rel="shortcut icon" href="images/airtkt.svg" type="image/x-icon">
     <title>Airtkt Cruise</title>
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -229,6 +233,7 @@ $num = mt_rand(100000, 999999);
                                                 <input type="hidden" id="depart" name="depart">
                                                 <input type="hidden" id="return" name="return">
                                             </div>
+
                                             <!-- //* CRUISE LINE -->
                                             <div class="form-group col-md-6 form-floating">
                                                 <select class="floating-select form-select input-sm" id="cruise-line"
@@ -238,17 +243,26 @@ $num = mt_rand(100000, 999999);
                                                     <option value="" selected disabled></option>
                                                     <option value="Cruise Line (Any)">Cruise Line (Any)</option>
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
-                                                        <option value="<?php  echo $cruiseshipLineData->cruisename; ?>">
+                                                        <option
+                                                            value="<?php echo $cruiseshipLineData->cruisename; ?>">
                                                             <?php echo $cruiseshipLineData->cruisename; ?>
+                                                                <img src="<?php echo $cruiseshipLineData->cruiselogo; ?>"
+                                                                    alt="<?php echo $cruiseshipLineData->cruisename; ?>">
                                                         </option>
                                                     <?php endforeach; ?>
                                                 </select>
                                                 <div class="new_label">
-                                                    <label>Cruise Line (Any)</label>
+                                                    <label for="cruise-line">Cruise Line (Any)</label>
                                                 </div>
                                                 <div class="invalid-tooltip top-arrow error_8" style="display: none;">
                                                     <i class="fa-solid fa-triangle-exclamation"></i>
                                                     Please select a cruise line.
+                                                </div>
+                                                <div class="lang-select">
+                                                    <div class="btn-select" value="" hidde></div>
+                                                    <div class="b">
+                                                        <ul id="a"></ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -569,6 +583,7 @@ $num = mt_rand(100000, 999999);
     <!-- end -->
 
     <!-- <script src="js/index.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/validation.js"></script>
@@ -693,7 +708,7 @@ $num = mt_rand(100000, 999999);
 
         $("#cruise-line").change(function () {
             var cruisedata = <?php echo json_encode($results['cruiseshipLineData']) ?>;
-
+            console.log(cruisedata)
             var selectedCruise = $(this).val();
             $("#cruise-ship").empty();
 
@@ -710,7 +725,10 @@ $num = mt_rand(100000, 999999);
                 });
             }
         });
-        
+
+
+
+
 
 
     </script>
