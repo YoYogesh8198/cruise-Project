@@ -235,39 +235,40 @@ $num = mt_rand(100000, 999999);
                                             </div>
 
                                             <!-- //* CRUISE LINE -->
-                                            <div class="form-group col-md-6 form-floating">
-                                                <select class="floating-select form-select input-sm" id="cruise-line"
-                                                    name="cruise-line" required=""
+
+                                            <div class="form-group col-md-6 form-floating form-floating-custom">
+                                                <select
+                                                    class="form-select input-sm position-relative p_lzero vodiapicker"
+                                                    id="cruise-line-select" required=""
                                                     oninvalid="this.setCustomValidity('Please select a cruise line.')"
                                                     oninput="setCustomValidity('')">
-                                                    <option value="" selected disabled></option>
                                                     <option value="Cruise Line (Any)">Cruise Line (Any)</option>
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
-                                                        <option
-                                                            value="<?php echo $cruiseshipLineData->cruisename; ?>">
-                                                            <?php echo $cruiseshipLineData->cruisename; ?>
-                                                                <img src="<?php echo $cruiseshipLineData->cruiselogo; ?>"
-                                                                    alt="<?php echo $cruiseshipLineData->cruisename; ?>">
+                                                        <option value="<?php echo $cruiseshipLineData->cruisename ?>"
+                                                            data-thumbnail="<?php echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php echo $cruiseshipLineData->cruisename ?>
                                                         </option>
                                                     <?php endforeach; ?>
                                                 </select>
+
                                                 <div class="new_label">
-                                                    <label for="cruise-line">Cruise Line (Any)</label>
-                                                </div>
-                                                <div class="invalid-tooltip top-arrow error_8" style="display: none;">
-                                                    <i class="fa-solid fa-triangle-exclamation"></i>
-                                                    Please select a cruise line.
-                                                </div>
-                                                <div class="lang-select">
-                                                    <div class="btn-select" value="" hidde></div>
+                                                    <input
+                                                        class="btn-select form-select input-sm input-sm2 m-0 position-relative p_lzero form-floating form-floating-custom"
+                                                        id="cruise-line" name="cruise-line" required=""
+                                                        oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                        oninput="setCustomValidity('')" placeholder="">
+
                                                     <div class="b">
                                                         <ul id="a"></ul>
                                                     </div>
+                                                    <label for="cruise-line-select">Cruise Line (Any)</label>
                                                 </div>
                                             </div>
+
+
                                         </div>
 
-                                        <div class="form-row row m_bottom">
+                                        <div class=" form-row row m_bottom">
                                             <!-- //* CRUISE SHIP -->
                                             <div class="form-group col-md-6 p_lzero form-floating">
                                                 <select class="floating-select form-select input-sm" id="cruise-ship"
@@ -300,7 +301,8 @@ $num = mt_rand(100000, 999999);
                                                     oninvalid="this.setCustomValidity('Please select a departure port.')"
                                                     oninput="setCustomValidity('')">
                                                     <option value="" selected disabled></option>
-                                                    <option value="Departure Ports(Any)">Departure Ports(Any)</option>
+                                                    <option value="Departure Ports(Any)">Departure Ports(Any)
+                                                    </option>
                                                     <?php foreach ($departure_portsData as $departurePorts): ?>
                                                         <option class="" value="<?php echo $departurePorts; ?>">
                                                             <?php echo $departurePorts; ?>
@@ -321,7 +323,8 @@ $num = mt_rand(100000, 999999);
                                             <div class="form-group col-md-6 p_lzero" style="cursor: not-allowed;">
                                                 <a id="pop_up" tabindex="0" class="lock_btn_page" data-placement="top"
                                                     role="button" data-bs-toggle="popover" title=""
-                                                    style="pointer-events: none;">Additional Discounts
+                                                    style="pointer-events: none;color: gray;">Additional
+                                                    Discounts
                                                     <img class="arrow-down" src="images/add_arrow.svg"></a>
                                                 <!-- <div> -->
                                                 <div data-name="popover-content">
@@ -591,6 +594,30 @@ $num = mt_rand(100000, 999999);
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+    <script type="text/javascript">
+        function custom_template(obj) {
+            var data = $(obj.element).data();
+            var text = $(obj.element).text();
+            if (data && data['img_src']) {
+                img_src = data['img_src'];
+                template = $("<div style=\"display: flex;gap: 10px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:55px;height:31px;\"/><p style=\"font-weight: 700;font-size:10pt;\">" + text + "</p></div>");
+                return template;
+            }
+        }
+        var options = {
+            'templateSelection': custom_template,
+            'templateResult': custom_template,
+        }
+        $('#id_select2_example').select2(options);
+        $('.select2-container--default .select2-selection--single').css({
+            'height': '60px',
+            'display': 'flex',
+            'flex-direction': 'row',
+            ' width': '609px'
+        });
+
+    </script>
     <script>
         // function toggleContent(element) {
         //     element.classList.toggle('expand');
@@ -706,10 +733,12 @@ $num = mt_rand(100000, 999999);
 
 
 
-        $("#cruise-line").change(function () {
+        // $("#cruise-line").click(function () {
+        $('#a').on('click', 'li', function (e) {
+            console.log($("#cruise-line").val())
             var cruisedata = <?php echo json_encode($results['cruiseshipLineData']) ?>;
             console.log(cruisedata)
-            var selectedCruise = $(this).val();
+            var selectedCruise = $("#cruise-line").val();
             $("#cruise-ship").empty();
 
             var selectedCruiseData = cruisedata.find(function (cruise) {
@@ -725,6 +754,12 @@ $num = mt_rand(100000, 999999);
                 });
             }
         });
+
+        // $('#a').on('click', 'li', function (e) {
+
+        //     var clickedItem = $(this).text();
+        //     console.log(clickedItem);
+        // });
 
 
 
