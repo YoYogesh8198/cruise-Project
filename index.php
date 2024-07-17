@@ -59,9 +59,11 @@ $num = mt_rand(100000, 999999);
     <link rel="shortcut icon" href="images/airtkt.svg" type="image/x-icon">
     <title>Airtkt Cruise</title>
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/select2.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -235,28 +237,44 @@ $num = mt_rand(100000, 999999);
                                             </div>
 
                                             <!-- //* CRUISE LINE -->
-                                            
-
 
                                             <div class="form-group col-md-6 form-floating">
-                                                <input class="floating-select form-select input-sm"
-                                                    type="text" id="cruise-line" readonly required>
+                                                <select id="cruise-line" name="cruise-line" required oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                    class="floating-select form-select input-sm"
+                                                    data-minimum-results-for-search="Infinity">
+                                                    <option  value="" selected disabled></option>
+                                                    <option data-img_src="" value="Cruise Line (Any)">Cruise Line (Any)</option>
+                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option
+                                                            data-img_src="<?php echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php echo $cruiseshipLineData->cruisename ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                                <div class="new_label">
+                                                    <label>Cruise Ship (Any)</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="form-group col-md-6 form-floating">
+                                                <input class="floating-select form-select input-sm" type="text"
+                                                    id="cruise-line" readonly required>
                                                 <ul id="cruise-line-img" style="display: none;">
                                                     <li data-value=""></li>
                                                     <li data-value="Cruise Line (Any)">Cruise Line (Any)</li>
-                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
-                                                        <li data-value="<?php echo $cruiseshipLineData->cruisename ?>">
-                                                            <img src="<?php echo $cruiseshipLineData->cruiselogo ?>"
-                                                                alt="cruise line logo" >
-                                                            <p><?php echo $cruiseshipLineData->cruisename ?></p>
+                                                    <?php //foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <li data-value="<?php //echo $cruiseshipLineData->cruisename ?>">
+                                                            <img src="<?php //echo $cruiseshipLineData->cruiselogo ?>"
+                                                                alt="cruise line logo">
+                                                            <p><?php //echo $cruiseshipLineData->cruisename ?></p>
                                                         </li>
-                                                    <?php endforeach; ?>
+                                                    <?php //endforeach; ?>
                                                 </ul>
                                                 <div class="new_label">
                                                     <label>Cruise Ship (Any)</label>
                                                 </div>
-                                                <!-- <label for="cruise-line">Cruise Line (Any)</label> -->
-                                            </div>
+                                                
+                                            </div> -->
                                             <!-- <label for="dog-names">Choose a dog name:</label> -->
                                             <!-- <div class="form-group col-md-6 form-floating form-floating-custom">
                                                 <select
@@ -623,7 +641,10 @@ $num = mt_rand(100000, 999999);
             var text = $(obj.element).text();
             if (data && data['img_src']) {
                 img_src = data['img_src'];
-                template = $("<div style=\"display: flex;gap: 10px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:55px;height:31px;\"/><p style=\"font-weight: 700;font-size:10pt;\">" + text + "</p></div>");
+                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:52px;height:30px;\"/><p style=\"font-weight: 500;font-size:15px;\">" + text + "</p></div>");
+                return template;
+            }else{
+                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" ><p style=\"width:55px;margin:0px;\"></p> <p style=\"font-weight: 500;font-size:15px;\">" + text + "</p></div>");
                 return template;
             }
         }
@@ -631,7 +652,7 @@ $num = mt_rand(100000, 999999);
             'templateSelection': custom_template,
             'templateResult': custom_template,
         }
-        $('#id_select2_example').select2(options);
+        $('#cruise-line').select2(options);
         $('.select2-container--default .select2-selection--single').css({
             'height': '60px',
             'display': 'flex',
@@ -755,7 +776,7 @@ $num = mt_rand(100000, 999999);
 
 
 
-        $("#cruise-line-img").click(function () {
+        $("#cruise-line").change(function () {
             // $('#a').on('click', 'li', function (e) {
             console.log($("#cruise-line").val())
             var cruisedata = <?php echo json_encode($results['cruiseshipLineData']) ?>;
