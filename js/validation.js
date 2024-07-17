@@ -406,107 +406,68 @@ $(document).ready(function () {
   });
 });
 
+
+
+
+//*2nd
 // $(document).ready(function () {
-//   //test for getting url value from attr
-// // var img1 = $('.test').attr("data-thumbnail");
-// // console.log(img1);
+//   var langArray = [];
+//   $(".vodiapicker option").each(function () {
+//     var img = $(this).attr("data-thumbnail");
+//     var text = this.innerText;
+//     var value = $(this).val();
+//     var item =
+//       '<li><img src="' +
+//       img +
+//       '" alt="" value="' +
+//       value +
+//       '"/><span>' +
+//       text +
+//       "</span></li>";
+//     langArray.push(item);
+//   });
 
-// //test for iterating over child elements
-// var langArray = [];
-// $('.vodiapicker option').each(function(){
-//   var img = $(this).attr("data-thumbnail");
-//   var text = this.innerText;
-//   var value = $(this).val();
-//   var item = '<li><img src="'+ img +'" alt="" value="'+value+'"/><span>'+ text +'</span></li>';
-//   langArray.push(item);
-// })
+//   $("#a").html(langArray);
 
-// $('#a').html(langArray);
+//   $("#a li").click(function () {
+//     var img = $(this).find("img").attr("src");
+//     var value = $(this).find("img").attr("value");
+//     var text = this.innerText;
+//     var item =
+//       '<li><img src="' + img + '" alt="" /><span>' + text + "</span></li>";
+//     $("#cruise-line").html(item);
+//     $("#cruise-line").attr("value", value);
+//     $(".b").hide();
+//   });
 
-// //Set the button value to the first el of the array
-// // $('.btn-select').html(langArray[0]);
-// // $('.btn-select').attr('value');
+//   $(".btn-select").click(function () {
+//     $(".b").toggle();
+//   });
 
-// //change button stuff on click
-// $('#a li').click(function(){
-//    var img = $(this).find('img').attr("src");
-//    var value = $(this).find('img').attr('value');
-//    var text = this.innerText;
-//    var item = '<li><img src="'+ img +'" alt="" /><span>'+ text +'</span></li>';
-//   $('#cruise-line').html(item);
-//   $('#cruise-line').attr('value', value);
-//   $(".b").toggle();
-//   // console.log(value);
+//   // Add this code to close the dropdown when clicking outside
+//   $(document).click(function (event) {
+//     if (!$(event.target).closest(".btn-select").length) {
+//       $(".b").hide();
+//     }
+//   });
 // });
 
-// $(".btn-select").click(function(){
-//         $(".b").toggle();
-//     });
+
+//*3rd
+// $("#cruise-line").on("click", function () {
+//   $("#cruise-line-img").toggle();
 // });
-// $('#a').on('click', 'li', function(e) {
-//   // 'this' refers to the clicked <li> element
-//   var clickedItem = $(this).text();
-//   console.log('List item clicked:', clickedItem);
+// // 
+// $("#cruise-line-img").on("click", "li", function () {
+//   const selectedValue = $(this).attr("data-value");
+//   $("#cruise-line").val(selectedValue);
+//   $("#cruise-line-img").hide();
 // });
 
-$(document).ready(function () {
-  var langArray = [];
-  $(".vodiapicker option").each(function () {
-    var img = $(this).attr("data-thumbnail");
-    var text = this.innerText;
-    var value = $(this).val();
-    var item =
-      '<li><img src="' +
-      img +
-      '" alt="" value="' +
-      value +
-      '"/><span>' +
-      text +
-      "</span></li>";
-    langArray.push(item);
-  });
-
-  $("#a").html(langArray);
-
-  $("#a li").click(function () {
-    var img = $(this).find("img").attr("src");
-    var value = $(this).find("img").attr("value");
-    var text = this.innerText;
-    var item =
-      '<li><img src="' + img + '" alt="" /><span>' + text + "</span></li>";
-    $("#cruise-line").html(item);
-    $("#cruise-line").attr("value", value);
-    $(".b").hide();
-  });
-
-  $(".btn-select").click(function () {
-    $(".b").toggle();
-  });
-
-  // Add this code to close the dropdown when clicking outside
-  $(document).click(function (event) {
-    if (!$(event.target).closest(".btn-select").length) {
-      $(".b").hide();
-    }
-  });
-});
 
 
-
-$("#cruise-line").on("click", function () {
-  $("#cruise-line-img").toggle();
-});
-// 
-$("#cruise-line-img").on("click", "li", function () {
-  const selectedValue = $(this).attr("data-value");
-  $("#cruise-line").val(selectedValue);
-  $("#cruise-line-img").hide();
-});
-
-
-
-$(document).on('click', function(event) {
-  if ($(event.target).closest('#cruise-line-img').length === 0 && $(event.target).attr('id') !== 'cruise-line') {
-    $('#cruise-line-img').hide();
-  }
-});
+// $(document).on('click', function(event) {
+//   if ($(event.target).closest('#cruise-line-img').length === 0 && $(event.target).attr('id') !== 'cruise-line') {
+//     $('#cruise-line-img').hide();
+//   }
+// });
