@@ -2403,5 +2403,8 @@ float: left !important;
 }
 #cruise-line-img img{
   image-resolution: inherit;
+  width: 55px;
+  height: 35px;
+  vertical-align: middle;
   /* image-resolution: 300dpi; */
 }

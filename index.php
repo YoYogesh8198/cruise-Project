@@ -247,7 +247,7 @@ $num = mt_rand(100000, 999999);
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
                                                         <li data-value="<?php echo $cruiseshipLineData->cruisename ?>">
                                                             <img src="<?php echo $cruiseshipLineData->cruiselogo ?>"
-                                                                alt="cruise line logo" style="height: 31px; width: 40px;">
+                                                                alt="cruise line logo" >
                                                             <p><?php echo $cruiseshipLineData->cruisename ?></p>
                                                         </li>
                                                     <?php endforeach; ?>
