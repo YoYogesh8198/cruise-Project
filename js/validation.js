@@ -490,3 +490,23 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
+$("#cruise-line").on("click", function () {
+  $("#cruise-line-img").toggle();
+});
+// 
+$("#cruise-line-img").on("click", "li", function () {
+  const selectedValue = $(this).attr("data-value");
+  $("#cruise-line").val(selectedValue);
+  $("#cruise-line-img").hide();
+});
+
+
+
+$(document).on('click', function(event) {
+  if ($(event.target).closest('#cruise-line-img').length === 0 && $(event.target).attr('id') !== 'cruise-line') {
+    $('#cruise-line-img').hide();
+  }
+});

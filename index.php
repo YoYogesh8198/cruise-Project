@@ -235,20 +235,42 @@ $num = mt_rand(100000, 999999);
                                             </div>
 
                                             <!-- //* CRUISE LINE -->
+                                            
 
-                                            <div class="form-group col-md-6 form-floating form-floating-custom">
+
+                                            <div class="form-group col-md-6 form-floating">
+                                                <input class="floating-select form-select input-sm"
+                                                    type="text" id="cruise-line" readonly required>
+                                                <ul id="cruise-line-img" style="display: none;">
+                                                    <li data-value=""></li>
+                                                    <li data-value="Cruise Line (Any)">Cruise Line (Any)</li>
+                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <li data-value="<?php echo $cruiseshipLineData->cruisename ?>">
+                                                            <img src="<?php echo $cruiseshipLineData->cruiselogo ?>"
+                                                                alt="cruise line logo" style="height: 31px; width: 40px;">
+                                                            <p><?php echo $cruiseshipLineData->cruisename ?></p>
+                                                        </li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                                <div class="new_label">
+                                                    <label>Cruise Ship (Any)</label>
+                                                </div>
+                                                <!-- <label for="cruise-line">Cruise Line (Any)</label> -->
+                                            </div>
+                                            <!-- <label for="dog-names">Choose a dog name:</label> -->
+                                            <!-- <div class="form-group col-md-6 form-floating form-floating-custom">
                                                 <select
                                                     class="form-select input-sm position-relative p_lzero vodiapicker"
                                                     id="cruise-line-select" required=""
                                                     oninvalid="this.setCustomValidity('Please select a cruise line.')"
                                                     oninput="setCustomValidity('')">
                                                     <option value="Cruise Line (Any)">Cruise Line (Any)</option>
-                                                    <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
-                                                        <option value="<?php echo $cruiseshipLineData->cruisename ?>"
-                                                            data-thumbnail="<?php echo $cruiseshipLineData->cruiselogo ?>">
-                                                            <?php echo $cruiseshipLineData->cruisename ?>
+                                                    <?php //foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
+                                                        <option value="<?php //echo $cruiseshipLineData->cruisename ?>"
+                                                            data-thumbnail="<?php //echo $cruiseshipLineData->cruiselogo ?>">
+                                                            <?php //echo $cruiseshipLineData->cruisename ?>
                                                         </option>
-                                                    <?php endforeach; ?>
+                                                    <?php //endforeach; ?>
                                                 </select>
 
                                                 <div class="new_label">
@@ -263,7 +285,7 @@ $num = mt_rand(100000, 999999);
                                                     </div>
                                                     <label for="cruise-line-select">Cruise Line (Any)</label>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
 
                                         </div>
@@ -733,8 +755,8 @@ $num = mt_rand(100000, 999999);
 
 
 
-        // $("#cruise-line").click(function () {
-        $('#a').on('click', 'li', function (e) {
+        $("#cruise-line-img").click(function () {
+            // $('#a').on('click', 'li', function (e) {
             console.log($("#cruise-line").val())
             var cruisedata = <?php echo json_encode($results['cruiseshipLineData']) ?>;
             console.log(cruisedata)

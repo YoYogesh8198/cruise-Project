@@ -1,6 +1,6 @@
 [
     {
-        "cruiselogo": "cruise_lines_logo/american-cruise.png",
+        "cruiselogo": "cruiselogo/americanCruise.png",
         "cruisename": "American Cruise Lines",
         "cruiseShips": [
             {
@@ -39,7 +39,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Atlas-Ocean.png",
+        "cruiselogo": "cruiselogo/Atlas-Ocean.jpg",
         "cruisename": "Atlas Ocean Voyages",
         "cruiseShips": [
             {
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Azamara.png",
+        "cruiselogo": "cruiselogo/Azamara.jpg",
         "cruisename": "Azamara",
         "cruiseShips": [
             {
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Carnival-Cruise.png",
+        "cruiselogo": "cruiselogo/Carnival-Cruise.png",
         "cruisename": "Carnival Cruise Line",
         "cruiseShips": [
             {
@@ -159,7 +159,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Celebrity-Cruises.jpg",
+        "cruiselogo": "cruiselogo/Celebrity-Cruises.jpg",
         "cruisename": "Celebrity Cruises",
         "cruiseShips": [
             {
@@ -216,7 +216,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Celestyal.webp",
+        "cruiselogo": "cruiselogo/Celestyal.webp",
         "cruisename": "Celestyal Cruises",
         "cruiseShips": [
             {
@@ -228,7 +228,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Costa-Cruises.png",
+        "cruiselogo": "cruiselogo/Costa-Cruises.png",
         "cruisename": "Costa Cruises",
         "cruiseShips": [
             {
@@ -258,7 +258,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Crystal-Cruises.jpg",
+        "cruiselogo": "cruiselogo/Crystal-Cruises.jpg",
         "cruisename": "Crystal Cruises",
         "cruiseShips": [
             {
@@ -270,7 +270,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Cunard-Line.png",
+        "cruiselogo": "cruiselogo/Cunard-Line.png",
         "cruisename": "Cunard Line",
         "cruiseShips": [
             {
@@ -288,7 +288,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Disney-Cruise.png",
+        "cruiselogo": "cruiselogo/Disney-Cruise.png",
         "cruisename": "Disney Cruise Line",
         "cruiseShips": [
             {
@@ -312,7 +312,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Emeral-Cruises.png",
+        "cruiselogo": "cruiselogo/Emeral-Cruises.png",
         "cruisename": "Emerald Cruises",
         "cruiseShips": [
             {
@@ -330,7 +330,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Explora-Journeys.jpg",
+        "cruiselogo": "cruiselogo/Explora-Journeys.jpg",
         "cruisename": "Explora Journeys",
         "cruiseShips": [
             {
@@ -342,7 +342,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Holland-America.png",
+        "cruiselogo": "cruiselogo/Holland-America.png",
         "cruisename": "Holland America Line",
         "cruiseShips": [
             {
@@ -378,7 +378,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Hurtigruten.png",
+        "cruiselogo": "cruiselogo/Hurtigruten.png",
         "cruisename": "Hurtigruten",
         "cruiseShips": [
             {
@@ -429,7 +429,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Lindblad-Expeditions.jpg",
+        "cruiselogo": "cruiselogo/Lindblad-Expeditions.jpg",
         "cruisename": "Lindblad Expeditions",
         "cruiseShips": [
             {
@@ -471,7 +471,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/MSC-Cruises.jpg",
+        "cruiselogo": "cruiselogo/MSC-Cruises.jpg",
         "cruisename": "MSC Cruises",
         "cruiseShips": [
             {
@@ -546,7 +546,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Norwegian-Cruise.png",
+        "cruiselogo": "cruiselogo/Norwegian-Cruise.png",
         "cruisename": "Norwegian Cruise Line",
         "cruiseShips": [
             {
@@ -612,7 +612,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Oceania-Cruises.jpg",
+        "cruiselogo": "cruiselogo/Oceania-Cruises.jpg",
         "cruisename": "Oceania Cruises",
         "cruiseShips": [
             {
@@ -642,7 +642,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/P&O-Cruises.jpg",
+        "cruiselogo": "cruiselogo/P&O-Cruises.jpg",
         "cruisename": "P&O Cruises",
         "cruiseShips": [
             {
@@ -669,7 +669,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Paul-Gauguin.png",
+        "cruiselogo": "cruiselogo/Paul-Gauguin.png",
         "cruisename": "Paul Gauguin Cruises",
         "cruiseShips": [
             {
@@ -678,7 +678,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Ponant.png",
+        "cruiselogo": "cruiselogo/Ponant.png",
         "cruisename": "Ponant",
         "cruiseShips": [
             {
@@ -720,7 +720,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Princess-Cruises.jpg",
+        "cruiselogo": "cruiselogo/Princess-Cruises.jpg",
         "cruisename": "Princess Cruises",
         "cruiseShips": [
             {
@@ -777,7 +777,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Quark-Expeditions.jpg",
+        "cruiselogo": "cruiselogo/Quark-Expeditions.jpg",
         "cruisename": "Quark Expeditions",
         "cruiseShips": [
             {
@@ -795,7 +795,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Regent-Seven-Seas.jpg",
+        "cruiselogo": "cruiselogo/Regent-Seven-Seas.jpg",
         "cruisename": "Regent Seven Seas Cruises",
         "cruiseShips": [
             {
@@ -819,7 +819,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/ritz_carlton.png",
+        "cruiselogo": "cruiselogo/ritz_carlton.png",
         "cruisename": "Ritz-Carlton Yacht Collection",
         "cruiseShips": [
             {
@@ -834,7 +834,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Royal-Caribbean.png",
+        "cruiselogo": "cruiselogo/Royal-Caribbean.png",
         "cruisename": "Royal Caribbean International",
         "cruiseShips": [
             {
@@ -927,7 +927,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Scenic-Luxury.png",
+        "cruiselogo": "cruiselogo/Scenic-Luxury.png",
         "cruisename": "Scenic Luxury Cruises & Tours",
         "cruiseShips": [
             {
@@ -939,7 +939,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Seabourn.jpg",
+        "cruiselogo": "cruiselogo/Seabourn.jpg",
         "cruisename": "Seabourn",
         "cruiseShips": [
             {
@@ -966,7 +966,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/SeaDream-Yacht Club.png",
+        "cruiselogo": "cruiselogo/SeaDream-Yacht Club.png",
         "cruisename": "SeaDream Yacht Club",
         "cruiseShips": [
             {
@@ -978,7 +978,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Silversea-Cruises.png",
+        "cruiselogo": "cruiselogo/Silversea-Cruises.png",
         "cruisename": "Silversea Cruises",
         "cruiseShips": [
             {
@@ -1020,7 +1020,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Star-Clippers.png",
+        "cruiselogo": "cruiselogo/Star-Clippers.png",
         "cruisename": "Star Clippers",
         "cruiseShips": [
             {
@@ -1035,7 +1035,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Viking.jpg",
+        "cruiselogo": "cruiselogo/Viking.jpg",
         "cruisename": "Viking",
         "cruiseShips": [
             {
@@ -1083,7 +1083,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Virgin-Voyages.png",
+        "cruiselogo": "cruiselogo/Virgin-Voyages.png",
         "cruisename": "Virgin Voyages",
         "cruiseShips": [
             {
@@ -1101,7 +1101,7 @@
         ]
     },
     {
-        "cruiselogo": "cruise_lines_logo/Windstar-Cruises.png",
+        "cruiselogo": "cruiselogo/Windstar-Cruises.png",
         "cruisename": "Windstar Cruises",
         "cruiseShips": [
             {

@@ -2235,7 +2235,7 @@ float: left !important;
   top: -6px;
   left: 10px;
   font-size: 18px;
-  color: #000;
+  color: #666;
 }
 .new_label label {
   color: #666;
@@ -2288,34 +2288,35 @@ float: left !important;
 }
 
 /*  */
-.vodiapicker{
-  display: none !important; 
+.vodiapicker {
+  display: none !important;
 }
 
-#a{
+#a {
   padding-left: 0px;
 }
 
-#a img, .btn-select img{
+#a img,
+.btn-select img {
   width: 31px;
-  
 }
 
-#a li{
+#a li {
   list-style: none;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-#a li:hover{
- background-color: #F4F3F3;
+#a li:hover {
+  background-color: #f4f3f3;
 }
 
-#a li img{
+#a li img {
   margin: 5px;
 }
 
-#a li span, .btn-select li span{
+#a li span,
+.btn-select li span {
   font-size: 15px;
   cursor: default;
   margin-left: 0px;
@@ -2323,26 +2324,25 @@ float: left !important;
 
 /* item list */
 
-.b{
+.b {
   height: 400px;
   overflow: auto;
   display: none;
   width: 100%;
   max-width: 283px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
   position: absolute;
   z-index: 100;
   background: #fff;
-  
 }
 
-.open{
+.open {
   display: show !important;
 }
 
-.btn-select{
+.btn-select {
   cursor: default;
   margin-top: 10px;
   width: 100%;
@@ -2351,27 +2351,57 @@ float: left !important;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #ccc;
- 
 }
-.btn-select li{
+.btn-select li {
   cursor: default;
   list-style: none;
   float: left;
   padding-bottom: 0px;
 }
 
-.btn-select:hover li{
+.btn-select:hover li {
   margin-left: 0px;
 }
 
-.btn-select:hover{
+.btn-select:hover {
   /* background-color: #F4F3F3; */
   border: 1px solid transparent;
   box-shadow: inset 0 0px 0px 1px #ccc;
-  
-  
 }
 
-.btn-select:focus{
-   outline:none;
+.btn-select:focus {
+  outline: none;
+}
+
+
+
+#cruise-line{
+  cursor: default;
+}
+#cruise-line-img {
+  cursor: default;
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 999; /* Set a high z-index value */
+  /* display: none; */
+  /* border: 1px solid rgb(7, 7, 7); */
+  height: 400px;
+  overflow: auto;
+}
+#cruise-line-img li {
+  cursor: default;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 5px;
+}
+#cruise-line-img li p{
+  font-size: 14px;
+}
+#cruise-line-img img{
+  image-resolution: inherit;
+  /* image-resolution: 300dpi; */
 }
