@@ -62,18 +62,18 @@ include_once 'db.php';
         <table class="rwd-table">
             <tbody>
                 <tr>
-                    <th>uniqueId</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Number</th>
-                    <th>Travelers</th>
-                    <th>Destination</th>
-                    <th>Cruise_length</th>
-                    <th>Depart Date</th>
-                    <th>Return Date</th>
-                    <th>Cruise Line</th>
-                    <th>Cruise Ship</th>
-                    <th>Departur Port</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/emoji/48/identification-card-emoji.png" alt="identification-card-emoji"/>uniqueId</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/cotton/28/name--v2.png" alt="name--v2"/>Name</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/emoji/28/e-mail.png" alt="e-mail"/> Email</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/fluency/28/google-pixel6.png" alt="google-pixel6"/>Number</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/officel/28/passenger-with-baggage.png" alt="passenger-with-baggage"/>Travelers</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/28/external-destination-map-and-navigation-flaticons-lineal-color-flat-icons-14.png" alt="external-destination-map-and-navigation-flaticons-lineal-color-flat-icons-14"/>Destination</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/cotton/28/baby-calendar.png" alt="baby-calendar"/>Cruise_length</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/doodle/28/cruise-ship--v1.png" alt="cruise-ship--v1"/>Depart Date</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/doodle/28/cruise-ship--v1.png" alt="cruise-ship--v1"/>Return Date</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/external-xnimrodx-blue-xnimrodx/28/external-cruise-traveling-xnimrodx-blue-xnimrodx.png" alt="external-cruise-traveling-xnimrodx-blue-xnimrodx"/>Cruise Line</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/bubbles/28/beach.png" alt="beach"/>Cruise Ship</th>
+                    <th><img width="28" height="28" src="https://img.icons8.com/color/28/port.png" alt="port"/>Departure Port</th>
                 </tr>
                 <?php foreach ($results['details'] as $table): ?>
                     <tr>
