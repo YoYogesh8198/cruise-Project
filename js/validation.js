@@ -264,6 +264,7 @@ $(document).ready(function () {
     var cruise_line = $("#cruise-line").val();
     var cruise_ship = $("#cruise-ship").val();
     var departure_port = $("#departure-port").val();
+    console.log(name,phone_number,total_passenger,email,destination,cruise_length,cruise_line,cruise_ship,departure_port)
 
     var ErrorMsg = false;
 
@@ -393,8 +394,13 @@ $(document).ready(function () {
           console.log(response);
           // response = JSON.parse(response);
           if (response["success"]) {
-            $("#loading").hide();
-            $("#formSubmitted").show();
+            // $("#loading").hide();
+            setTimeout(function() {
+              $("#loading").hide();
+              $("#formSubmitted").show();
+            }, 1500);
+            
+            $("#cruise-line").val("");
           } else {
             $("#loading").hide();
             $("#formSubmitted").text(response["message"]);

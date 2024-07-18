@@ -1,7 +1,6 @@
 <?php
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
-
 // // for warning when warning show on UI
 include 'db.php';
 // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -62,8 +61,6 @@ $num = mt_rand(100000, 999999);
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/select2.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -239,11 +236,13 @@ $num = mt_rand(100000, 999999);
                                             <!-- //* CRUISE LINE -->
 
                                             <div class="form-group col-md-6 form-floating">
-                                                <select id="cruise-line" name="cruise-line" required oninvalid="this.setCustomValidity('Please select a cruise line.')"
+                                                <select id="cruise-line" name="cruise-line" required
+                                                    oninvalid="this.setCustomValidity('Please select a cruise line.')"
                                                     class="floating-select form-select input-sm"
                                                     data-minimum-results-for-search="Infinity">
-                                                    <option  value="" selected disabled></option>
-                                                    <option data-img_src="" value="Cruise Line (Any)">Cruise Line (Any)</option>
+                                                    <option value="" selected disabled></option>
+                                                    <option data-img_src="" value="Cruise Line (Any)">Cruise Line (Any)
+                                                    </option>
                                                     <?php foreach ($results['cruiseshipLineData'] as $cruiseshipLineData): ?>
                                                         <option
                                                             data-img_src="<?php echo $cruiseshipLineData->cruiselogo ?>">
@@ -641,10 +640,10 @@ $num = mt_rand(100000, 999999);
             var text = $(obj.element).text();
             if (data && data['img_src']) {
                 img_src = data['img_src'];
-                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:52px;height:30px;\"/><p style=\"font-weight: 500;font-size:15px;\">" + text + "</p></div>");
+                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:52px;height:30px;\"/><p style=\"font-weight: 500;font-size:18px;\">" + text + "</p></div>");
                 return template;
-            }else{
-                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" ><p style=\"width:55px;margin:0px;\"></p> <p style=\"font-weight: 500;font-size:15px;\">" + text + "</p></div>");
+            } else {
+                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <p style=\"font-weight: 500;font-size:18px;\">" + text + "</p></div>");
                 return template;
             }
         }
