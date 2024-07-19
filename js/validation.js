@@ -108,7 +108,7 @@ $(document).ready(function () {
     var cruise_line = $("#cruise-line").val();
     var cruise_ship = $("#cruise-ship").val();
     var departure_port = $("#departure-port").val();
-    console.log(name,phone_number,total_passenger,email,destination,cruise_length,cruise_line,cruise_ship,departure_port)
+    console.log(name,phone_number,total_passenger,email,destination,cruise_length,depart_date,cruise_line,cruise_ship,departure_port)
 
     var ErrorMsg = false;
 
@@ -235,6 +235,8 @@ $(document).ready(function () {
         url: "api.php",
         data: $("#cruiseForm").serialize(),
         success: function (response) {
+          $("#cruiseForm")[0].reset();
+          $("#cruise-line").val("Cruise Line (Any)").trigger('change');
           console.log(response);
           // response = JSON.parse(response);
           if (response["success"]) {
@@ -243,8 +245,7 @@ $(document).ready(function () {
               $("#loading").hide();
               $("#formSubmitted").show();
             }, 1500);
-            $("#cruiseForm")[0].reset();
-            $("#cruise-line").val("");
+            
           } else {
             $("#loading").hide();
             $("#formSubmitted").text(response["message"]);

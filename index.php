@@ -22,15 +22,17 @@ $num = mt_rand(100000, 999999);
     <link rel="shortcut icon" href="images/airtkt.svg" type="image/x-icon">
     <title>Airtkt Cruise</title>
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <script src="js/select2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/daterangepicker.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/jquery.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
@@ -115,7 +117,7 @@ $num = mt_rand(100000, 999999);
                                                     name="destination" required=""
                                                     oninvalid="this.setCustomValidity('Please select a destination.')"
                                                     oninput="setCustomValidity('')">
-                                                    <!-- <option value="">Destination (Any)</option> -->
+                                                    <!-- <option value="" >Destination (Any)</option> -->
                                                     <option value="Destination (Any)">Destination (Any)</option>
                                                     <?php foreach ($destination_cursor as $value): ?>
                                                         <option class="" value="<?php echo $value['destination']; ?>">
@@ -138,7 +140,7 @@ $num = mt_rand(100000, 999999);
                                                         </option>
                                                     <?php endforeach; ?>
                                                 </select>
-                                                <label for="destination">Destination</label>
+                                                <label for="destination">Cruise Length</label>
                                             </div>
                                         </div>
 
@@ -147,7 +149,8 @@ $num = mt_rand(100000, 999999);
                                             <div
                                                 class="form-group col-md-6 position-relative p_lzero form-floating form-floating-custom">
                                                 <input type="text" id="depart_date" name="depart_date"
-                                                    class="form-control input-sm" autocomplete="off" required>
+                                                    class="form-control input-sm" autocomplete="off" required
+                                                    oninvalid="this.setCustomValidity('Please enter a Date.')">
                                                 <img class="ui-datepicker-trigger" src="images/cal.png"
                                                     alt="Click here for calendar" title="Click here for calendar">
                                                 <label for="depart_date">Depart Date</label>
@@ -175,6 +178,7 @@ $num = mt_rand(100000, 999999);
                                                     <label>Cruise Line</label>
                                                 </div>
                                             </div>
+
                                             <!-- //* this is without image on input field -->
                                             <!-- <div class="form-group col-md-6 form-floating">
                                                 <input class="floating-select form-select input-sm"
@@ -263,7 +267,10 @@ $num = mt_rand(100000, 999999);
                                                 <div id="f">
                                                     <p id="formSubmitted"
                                                         style="color: green;font-size: 17px;font-weight: 900;display:none;">
-                                                        ✔ successfully Submitted </p>
+                                                        <img width="38" height="38"
+                                                            src="https://img.icons8.com/fluency/48/checked.png"
+                                                            alt="checked" /> successfully Submitted
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -467,7 +474,7 @@ $num = mt_rand(100000, 999999);
                 <div class="row">
                     <div class="col-md-12">
                         <div class="accordion accordion_mine" id="accordionExample">
-                            <?php foreach ($FindBestCruise_cursor as $findBestCruise) { ?>
+                            <?php foreach ($FindBestCruise_cursor as $index => $findBestCruise) { ?>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="heading_<?php echo $index; ?>">
                                         <button class="accordion-button <?php echo $index === 0 ? 'active' : ''; ?>"
@@ -503,7 +510,6 @@ $num = mt_rand(100000, 999999);
     <!-- end -->
 
     <!-- <script src="js/index.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/validation.js"></script>
@@ -511,126 +517,15 @@ $num = mt_rand(100000, 999999);
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
-    <script type="text/javascript">
-        function custom_template(obj) {
-            var data = $(obj.element).data();
-            var text = $(obj.element).text();
-            if (data && data['img_src']) {
-                img_src = data['img_src'];
-                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <img src=\"" + img_src + "\" style=\"width:52px;height:30px;\"/><p style=\"font-weight: 500;font-size:18px;\">" + text + "</p></div>");
-                return template;
-            } else {
-                template = $("<div style=\"display: flex;gap: 5px;align-items: center;\" > <p style=\"font-weight: 500;font-size:18px;\">" + text + "</p></div>");
-                return template;
-            }
-        }
-        var options = {
-            'templateSelection': custom_template,
-            'templateResult': custom_template,
-        }
-        $('#cruise-line').select2(options);
-        $('.select2-container--default .select2-selection--single').css({
-            'height': '60px',
-            'display': 'flex',
-            'flex-direction': 'row',
-            ' width': '609px'
-        });
-
-    </script>
-    <script>
-        // function toggleContent(element) {
-        //     element.classList.toggle('expand');
-        // }
-        //Script for sidebar nav start
-        $(window).resize(function () {
-            if ($(window).width() < 768) {
-                document.getElementById("mySidenav").style.width = "0";
-            } else {
-                document.getElementById("mySidenav").style.width = "auto";
-            }
-
-        });
-
-
-        function openNav() {
-            event.stopPropagation();
-            $('.hambrg').hide();
-            $('.hambrg').addClass('open');
-            if ($('.hambrg').hasClass("open")) {
-                $('body').addClass('noscroll');
-            } else {
-                $('body').removeClass('noscroll');
-            }
-            document.getElementById("mySidenav").style.width = "180px";
-            document.getElementById("main_ctr").style.marginLeft = "-180px";
-        }
-
-        function closeNav() {
-            event.stopPropagation();
-            $('.hambrg').show();
-            $('.hambrg').removeClass('open');
-            if ($('.hambrg').hasClass("open")) {
-                $('body').addClass('noscroll');
-            } else {
-                $('body').removeClass('noscroll');
-            }
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main_ctr").style.marginLeft = "0";
-        }
-    </script>
+    <script src="js/select2.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script> -->
+    <script src="js/customscript.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.min.js"></script>
 
-    <script>
-        $(function () {
-            $('#depart_date').daterangepicker({
-                autoApply: true,
-                autoUpdateInput: false,
-                minDate: new Date(),
-                startDate: moment(),
-                endDate: moment().add(1, "Day"),
-                locale: {
-                    format: "YYYY-MM-DD"
-                }
-            }).on("apply.daterangepicker", function (ev, picker) {
-                // Enable autoUpdateInput
-                $(this).data('daterangepicker').autoUpdateInput = true;
-
-                // Set the value of the input field
-                $(this).val(picker.startDate.format("MMM DD ,YY") + ' - ' + picker.endDate.format(
-                    "MMM DD ,YY"));
-            });
-        });
-    </script>
 
     <script>
-        $(document).ready(function () {
-            $("#pop_up").click(function () {
-                $(".add_body").slideToggle("slow");
-            })
-        })
-
-    </script>
-    <script>
-        document.getElementById('pop_up').addEventListener('click', function () {
-            // Get the image element
-            var image = this.querySelector('img.arrow-down');
-
-            // Toggle rotation
-            if (image.classList.contains('rotate')) {
-                image.style.transform = 'rotate(0deg)';
-                image.classList.remove('rotate');
-            } else {
-                image.style.transform = 'rotate(180deg)';
-                image.classList.add('rotate');
-            }
-        });
-
-
-
         $("#cruise-line").change(function () {
-            // $('#a').on('click', 'li', function (e) {
             console.log($("#cruise-line").val())
             var cruisedata = <?php echo json_encode($cruiseShipData_cursor) ?>;
             console.log(cruisedata)
@@ -640,7 +535,6 @@ $num = mt_rand(100000, 999999);
             var selectedCruiseData = cruisedata.find(function (cruise) {
                 return cruise.cruisename === selectedCruise;
             });
-            // $("#cruise-ship").append('<option value=""></option>')
             $("#cruise-ship").append('<option value="Cruise Ship (Any)">Cruise Ship (Any)</option>')
             if (selectedCruiseData) {
                 selectedCruiseData.cruiseShips.forEach(function (ship) {
@@ -654,8 +548,9 @@ $num = mt_rand(100000, 999999);
             })
         });
 
-
     </script>
+
+
     <!-- <script src="js/guru-new.js"></script> -->
 </body>
 
