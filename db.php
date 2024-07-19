@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // $client = new MongoDB\Driver\Manager("mongodb://localhost:27017");
 // $database = 'cruiseTable';
 // $destination = 'destination';
@@ -45,12 +45,7 @@
 // $destinationData = $results['destination']->destination;
 // $cruiseLengthData = $results['cruiseLength']->cruiseLength;
 // $departure_portsData = $results['departure_ports']->departure_ports;
-
-// ?> -->
-
-
-
-
+?> 
 <?php
 require 'vendor/autoload.php';
 
@@ -239,6 +234,30 @@ class monogd
 }
 
 
+// $mongo = new monogd();
 
+// // Data to be inserted
+// $dataToInsert = array(
+//     array(
+//         'uniqueId' => '12345',
+//         'name' => 'John Doe',
+//         'email' => 'johndoe@example.com',
+//         'number' => '1234567890',
+//         'travelers' => 2,
+//         'destination' => 'Caribbean',
+//         'cruise_length' => 7,
+//         'depart' => '2023-02-20',
+//         'return' => '2023-02-27',
+//         'cruise_line' => 'Royal Caribbean',
+//         'cruise_ship' => 'Symphony of the Seas',
+//         'departure_port' => 'Miami'
+//     )
+// );
+
+// // Call the details function to insert data
+// $mongo->details($dataToInsert, 3);
 
 ?>
+
+
+

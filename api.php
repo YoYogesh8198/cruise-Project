@@ -1,7 +1,7 @@
 
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+error_reporting(0);
+// ini_set('display_errors', 1);
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
@@ -9,9 +9,15 @@ header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: application/json');
 
 $response = array("success" => false, "message" => "some error occured");
+
 include 'db.php';
+
+$m = new monogd();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
+        // echo "Received POST data:\n";
+        // var_dump($_POST) ;
         $name = $_POST['name'];
         $email = $_POST['email'];
         $number = $_POST['number'];
@@ -26,40 +32,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $departure_port = $_POST['departure-port'];
         $uniqueId = $_POST['uniqueId'];
 
-        $filter = ['uniqueId' => $uniqueId];
-        $options = [];
+        $data = array(
+            'uniqueId' => $uniqueId,
+            'name' => $name,
+            'email' => $email,
+            'number' => $number,
+            'travelers' => $travelers,
+            'destination' => $destination,
+            'cruise_length' => $cruise_length,
+            'depart' => $depart,
+            'return' => $return,
+            'cruise_line' => $cruise_line,
+            'cruise_ship' => $cruise_ship,
+            'departure_port' => $departure_port,
+        );
 
-        $query = new MongoDB\Driver\Query($filter, $options);
-        $rows = $client->executeQuery('cruiseTable.details', $query);
-
-        if (count($rows->toArray()) == 0) {
-            $insert = new MongoDB\Driver\BulkWrite;
-            $insert->insert(
-                [
-                    'uniqueId' => $uniqueId,
-                    'name' => $name,
-                    'email' => $email,
-                    'number' => $number,
-                    'travelers' => $travelers,
-                    'destination' => $destination,
-                    'cruise_length' => $cruise_length,
-                    // 'add_hold_time' => $add_hold_time,
-                    'depart' => $depart,
-                    'return' => $return,
-                    'cruise_line' => $cruise_line,
-                    'cruise_ship' => $cruise_ship,
-                    'departure_port' => $departure_port,
-                ]
-            );
-            $result = $client->executeBulkWrite('cruiseTable.details', $insert);
-            if ($result) {
-                $response = array("success" => true, "message" => "✔ successfully Submitted ");
-            }
-        }
+        $m->details(array($data), 3);
+        $response = array("success" => true, "message" => "✔ successfully Submitted ");
     } catch (\Throwable $th) {
-        //
+        
     }
 }
+
 $num = mt_rand(100000, 999999);
 echo json_encode($response);
 ?>

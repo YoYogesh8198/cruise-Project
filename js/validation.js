@@ -229,7 +229,7 @@ $(document).ready(function () {
       $("#submit1").hide();
       $("#loading").show();
 
-      //* AJAX FOR FOR SUBMIT
+      // AJAX FOR FOR SUBMIT
       $.ajax({
         type: "post",
         url: "api.php",
