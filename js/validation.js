@@ -94,162 +94,6 @@ function checkValidateMobile(input) {
 }
 
 //! submit button click validation..
-// $(document).ready(function () {
-//   $("#submit1").click(function () {
-//     var name = $("#name").val();
-//     var phone_number = $("#number").val();
-//     var phone_length = $("#number").val().length;
-//     var total_passenger = $("#travelers").val();
-//     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     var email = $("#email").val();
-//     var destination = $("#destination").val();
-//     var cruise_length = $("#cruise-length").val();
-//     var depart_date = $("#depart_date").val();
-//     var cruise_line = $("#cruise-line").val();
-//     var cruise_ship = $("#cruise-ship").val();
-//     var departure_port = $("#departure-port").val();
-
-//     var ErrorMsg = false;
-
-//     // Validation for each input field
-//     if (name == "" || name == null || name == undefined) {
-//       $("#name").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#name").css("border", "1px solid #ced4da");
-//     }
-
-//     if (email == "" || email == null || email == undefined) {
-//       $("#email").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else if (emailRegex.test(email) === false) {
-//       $("#email").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#email").css("border", "1px solid #ced4da");
-//     }
-
-//     if (
-//       phone_number == "" ||
-//       phone_number == undefined ||
-//       phone_number == null
-//     ) {
-//       $("#number").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else if (phone_length != 10) {
-//       $("#number").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#number").css("border", "1px solid #ced4da");
-//     }
-
-//     if (
-//       total_passenger == "" ||
-//       total_passenger == null ||
-//       total_passenger == undefined
-//     ) {
-//       $("#travelers").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#travelers").css("border", "1px solid #ced4da");
-//     }
-
-//     if (destination == "" || destination == null || destination == undefined) {
-//       $("#destination").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#destination").css("border", "1px solid #ced4da");
-//     }
-
-//     if (
-//       cruise_length == "" ||
-//       cruise_length == null ||
-//       cruise_length == undefined
-//     ) {
-//       $("#cruise-length").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#cruise-length").css("border", "1px solid #ced4da");
-//     }
-
-//     if (depart_date == "") {
-//       $("#depart_date").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else if (depart_date) {
-//       $("#depart").val(depart_date.slice(0, 10));
-//       $("#return").val(depart_date.slice(13));
-//       $("#depart_date").css("border", "1px solid #ced4da");
-//     }
-
-//     if (cruise_line == "" || cruise_line == null || cruise_line == undefined) {
-//       $("#cruise-line").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#cruise-line").css("border", "1px solid #ced4da");
-//     }
-
-//     if (cruise_ship == "" || cruise_ship == null || cruise_ship == undefined) {
-//       $("#cruise-ship").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#cruise-ship").css("border", "1px solid #ced4da");
-//     }
-
-//     if (
-//       departure_port == "" ||
-//       departure_port == null ||
-//       departure_port == undefined
-//     ) {
-//       $("#departure-port").css("border", "1px solid red");
-//       ErrorMsg = true;
-//       return;
-//     } else {
-//       $("#departure-port").css("border", "1px solid #ced4da");
-//     }
-
-//     if (ErrorMsg) {
-//       // If there are errors, return false to prevent form submission
-//       return false;
-//     }
-
-//     // If no errors, proceed with form submission via AJAX
-//     $("#submit1").hide();
-//     $("#loading").show();
-
-//     // AJAX FOR FORM SUBMIT
-//     $.ajax({
-//       type: "post",
-//       url: "api.php",
-//       data: $("#cruiseForm").serialize(),
-//       success: function (response) {
-//         console.log(response);
-//         if (response["success"]) {
-//           $("#loading").hide();
-//           $("#formSubmitted").show();
-//         } else {
-//           $("#loading").hide();
-//           $("#formSubmitted").text(response.message);
-//           $("#formSubmitted").show();
-//         }
-//       },
-//     });
-
-//     // Prevent default form submission behavior
-//     // return false;
-//   });
-// });
-
 $(document).ready(function () {
   $("#submit1").click(function (e) {
     var name = $("#name").val();
@@ -399,7 +243,7 @@ $(document).ready(function () {
               $("#loading").hide();
               $("#formSubmitted").show();
             }, 1500);
-            
+            $("#cruiseForm")[0].reset();
             $("#cruise-line").val("");
           } else {
             $("#loading").hide();
@@ -414,8 +258,6 @@ $(document).ready(function () {
 
 
 
-
-//*2nd
 // $(document).ready(function () {
 //   var langArray = [];
 //   $(".vodiapicker option").each(function () {
@@ -441,8 +283,8 @@ $(document).ready(function () {
 //     var text = this.innerText;
 //     var item =
 //       '<li><img src="' + img + '" alt="" /><span>' + text + "</span></li>";
-//     $("#cruise-line").html(item);
-//     $("#cruise-line").attr("value", value);
+//     $(".btn-select").html(item);
+//     $(".btn-select").attr("value", value);
 //     $(".b").hide();
 //   });
 
@@ -459,21 +301,21 @@ $(document).ready(function () {
 // });
 
 
-//*3rd
-// $("#cruise-line").on("click", function () {
-//   $("#cruise-line-img").toggle();
-// });
-// // 
-// $("#cruise-line-img").on("click", "li", function () {
-//   const selectedValue = $(this).attr("data-value");
-//   $("#cruise-line").val(selectedValue);
-//   $("#cruise-line-img").hide();
-// });
+$("#cruise-line").on("click", function () {
+  // $("#cruise-line-img").toggle();
+  $("#cruise-line-img").toggle();
+});
+// 
+$("#cruise-line-img").on("click", "li", function () {
+  const selectedValue = $(this).attr("data-value");
+  $("#cruise-line").val(selectedValue);
+  $("#cruise-line-img").hide();
+});
 
 
 
-// $(document).on('click', function(event) {
-//   if ($(event.target).closest('#cruise-line-img').length === 0 && $(event.target).attr('id') !== 'cruise-line') {
-//     $('#cruise-line-img').hide();
-//   }
-// });
+$(document).on('click', function(event) {
+  if ($(event.target).closest('#cruise-line-img').length === 0 && $(event.target).attr('id') !== 'cruise-line') {
+    $('#cruise-line-img').hide();
+  }
+});

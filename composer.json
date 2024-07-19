@@ -1,0 +1,12 @@
+{
+    "name": "ett_pc/cruise-html_v2-copy",
+    "description": "for cruise booking",
+    "autoload": {
+        "psr-4": {
+            "EttPc\\CruiseHtmlV2Copy\\": "src/"
+        }
+    },
+    "require": {
+        "mongodb/mongodb": "^1.7"
+    }
+}

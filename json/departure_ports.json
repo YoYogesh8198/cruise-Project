@@ -1,243 +1,707 @@
-[{
-  "_id": {
-    "$oid": "667c06d71525e9b26d3aa1fc"
+[
+  {
+    "departports": "Abu Dhabi, UAE"
   },
-  
-  "departure_ports": [
-    "Abu Dhabi, UAE",
-    "Adelaide, Australia",
-    "Alicante, Spain",
-    "Amelia Island, FL",
-    "Amsterdam, Holland",
-    "Anchorage, AK",
-    "Antigua",
-    "Argentina (Any Port)",
-    "Aruba",
-    "Athens (Piraeus), Greece",
-    "Auckland, New Zealand",
-    "Australia (Any Port)",
-    "Bahamas (Any Port)",
-    "Balboa, Panama",
-    "Baltimore, MD",
-    "Barbados",
-    "Barcelona, Spain",
-    "Bari, Italy",
-    "Bayonne, NJ",
-    "Belfast, Northern Ireland",
-    "Benoa, Bali, Indonesia",
-    "Bergen, Norway",
-    "Bermuda (Any Port)",
-    "Bilbao, Spain",
-    "Bombay (Mumbai), India",
-    "Bordeaux, France",
-    "Boston, MA",
-    "Brazil (Any Port)",
-    "Brindisi, Italy",
-    "Brisbane, Australia",
-    "Broome, Australia",
-    "Buenos Aires, Argentina",
-    "Cairns, Australia",
-    "California (Any Port)",
-    "Canada (Any Port)",
-    "Canary Islands (Any Port), Spanish Territory",
-    "Cannes, France",
-    "Cape Town, South Africa",
-    "Cartagena, Colombia",
-    "Charleston, SC",
-    "China (Any Port)",
-    "Colombia (Any Port)",
-    "Colon, Panama",
-    "Copenhagen, Denmark",
-    "Costa Rica (Any Port)",
-    "Cozumel, Mexico",
-    "Croatia (Any Port)",
-    "Curacao",
-    "Dakar, Senegal",
-    "Darwin, Australia",
-    "Doha, Qatar",
-    "Dominican Republic",
-    "Dover, England",
-    "Dubai, United Arab Emirates",
-    "Dublin, Ireland",
-    "Dubrovnik, Croatia",
-    "Dunedin (Port Chalmers), New Zealand",
-    "Durban, South Africa",
-    "Ecuador (Any Port)",
-    "Egypt (Any Port)",
-    "Ephesus / Kusadasi, Turkey",
-    "Fiji",
-    "Florence / Pisa (Livorno), Italy",
-    "Florida (Any Port)",
-    "Fort Lauderdale, FL",
-    "Fort-de-France, Martinique",
-    "France (Any Port)",
-    "Fuerte Amador, Panama",
-    "Funchal, Madeira, Portugal",
-    "Galveston, TX",
-    "Genoa, Italy",
-    "Glasgow, Scotland",
-    "Grand Canary Island, Canary Islands",
-    "Greece (Any Port)",
-    "Greenland (Any Port)",
-    "Guadeloupe",
-    "Haifa, Israel",
-    "Halifax, NS, Canada",
-    "Hamburg, Germany",
-    "Hamilton, Bermuda",
-    "Helsinki, Finland",
-    "Hobart, Tasmania, Australia",
-    "Hong Kong",
-    "Honolulu, Oahu, HI",
-    "Iceland (Any Port)",
-    "India (Any Port)",
-    "Indonesia (Any Port)",
-    "Ireland (Any Port)",
-    "Israel (Any Port)",
-    "Istanbul, Turkey",
-    "Itajai, Brazil",
-    "Italy (Any Port)",
-    "Jacksonville, FL",
-    "Jamaica (Any Port)",
-    "Japan (Any Port)",
-    "Jeddah, Saudi Arabia",
-    "Juneau, AK",
-    "Kangerlussuaq, Greenland",
-    "Kiel, Germany",
-    "King George Island",
-    "Kirkenes, Norway",
-    "Kobe, Japan",
-    "Kyoto, Japan",
-    "La Romana, Dominican Republic",
-    "Laem Chabang, Thailand",
-    "Lanzarote, Canary Islands",
-    "Las Palmas, Grand Canary Island, Canary Islands",
-    "Lautoka, Fiji",
-    "Lima (Callao), Peru",
-    "Limassol, Cyprus",
-    "Lisbon, Portugal",
-    "Liverpool, England",
-    "London, England",
-    "Longyearbyen, Spitsbergen, Norway",
-    "Los Angeles, CA",
-    "Luxor (Safaga), Egypt",
-    "Maceio, Brazil",
-    "Madagascar (Any Port)",
-    "Mahe, Seychelles",
-    "Malaga, Spain",
-    "Malaysia (Any Port)",
-    "Maldives (Any Port)",
-    "Malta (Any Port)",
-    "Manaus, Brazil",
-    "Marseille, France",
-    "Melbourne, Australia",
-    "Messina, Sicily, Italy",
-    "Miami, FL",
-    "Milwaukee, WI",
-    "Mobile, AL",
-    "Mombasa, Kenya",
-    "Monte Carlo, Monaco",
-    "Montego Bay, Jamaica",
-    "Montevideo, Uruguay",
-    "Montreal, QC, Canada",
-    "Muscat, Oman",
-    "Naples, Italy",
-    "Nassau, Bahamas",
-    "New Orleans, LA",
-    "New York, NY",
-    "New Zealand (Any Port)",
-    "Nice, France",
-    "Norfolk, VA",
-    "Norway (Any Port)",
-    "Olbia, Italy",
-    "Oporto (Leixoes), Portugal",
-    "Osaka, Japan",
-    "Oslo, Norway",
-    "Palermo, Sicily, Italy",
-    "Palma de Mallorca, Spain",
-    "Panama City, Panama",
-    "Papeete, Tahiti",
-    "Paris (Le Havre), France",
-    "Perth (Fremantle), Australia",
-    "Peru (Any Port)",
-    "Petra (Aqaba), Jordan",
-    "Phuket, Thailand",
-    "Pointe-a-Pitre, Guadeloupe",
-    "Port Canaveral, FL",
-    "Port Louis, Mauritius",
-    "Port Williams, Chile",
-    "Portland, ME",
-    "Portsmouth, England",
-    "Portugal (Any Port)",
-    "Providence, RI",
-    "Puerto Caldera, Costa Rica",
-    "Puerto Rico (Any Port)",
-    "Punta Arenas, Chile",
-    "Puntarenas, Costa Rica",
-    "Quebec City, QC, Canada",
-    "Quito, Ecuador",
-    "Ravenna, Italy",
-    "Recife, Brazil",
-    "Reykjavik, Iceland",
-    "Rio de Janeiro, Brazil",
-    "Rome (Civitavecchia), Italy",
-    "Rotterdam, Holland",
-    "Russian Waterways",
-    "Salvador, Brazil",
-    "San Antonio, Chile",
-    "San Diego, CA",
-    "San Francisco, CA",
-    "San Jose, Costa Rica",
-    "San Juan, Puerto Rico",
-    "Santa Cruz, Tenerife, Canary Islands",
-    "Santiago (Any Port), Chile",
-    "Sao Paulo (Santos), Brazil",
-    "Savona, Italy",
-    "Scotland (Any Port)",
-    "Seattle, WA",
-    "Seville, Spain",
-    "Shanghai, China",
-    "Sicily (Any Port)",
-    "Singapore",
-    "Sitka, AK",
-    "Sokhna, Egypt",
-    "South Africa (Any Port)",
-    "Southampton, England",
-    "Spain (Any Port)",
-    "Spitsbergen, Norway",
-    "Split, Croatia",
-    "St. Lucia",
-    "St. Maarten",
-    "St. Martin",
-    "St. Thomas, U.S. Virgin Islands",
-    "Stockholm, Sweden",
-    "Sweden (Any Port)",
-    "Sydney, Australia",
-    "Tahiti, French Polynesia",
-    "Taipei (Keelung), Taiwan",
-    "Tampa, FL",
-    "Taranto, Italy",
-    "Tasmania (Any Port), Australia",
-    "Tema, Ghana",
-    "Tenerife, Canary Islands",
-    "Thailand (Any Port)",
-    "Tianjin, China",
-    "Tokyo, Japan",
-    "Toronto, ON, Canada",
-    "Toulon, France",
-    "Trieste, Italy",
-    "Tromso, Norway",
-    "Trondheim, Norway",
-    "Turkey (Any Port)",
-    "United States (Any Port)",
-    "Ushuaia, Argentina",
-    "Valencia, Spain",
-    "Valletta, Malta",
-    "Valparaiso, Chile",
-    "Vancouver, BC, Canada",
-    "Venice, Italy",
-    "Victoria, Seychelles",
-    "Warnemunde, Germany",
-    "Yucatan Mexico (Any Port)",
-    "Zeebrugge, Belgium"
-  ]
-}]
+  {
+    "departports": "Adelaide, Australia"
+  },
+  {
+    "departports": "Alicante, Spain"
+  },
+  {
+    "departports": "Amelia Island, FL"
+  },
+  {
+    "departports": "Amsterdam, Holland"
+  },
+  {
+    "departports": "Anchorage, AK"
+  },
+  {
+    "departports": "Antigua"
+  },
+  {
+    "departports": "Argentina (Any Port)"
+  },
+  {
+    "departports": "Aruba"
+  },
+  {
+    "departports": "Athens (Piraeus), Greece"
+  },
+  {
+    "departports": "Auckland, New Zealand"
+  },
+  {
+    "departports": "Australia (Any Port)"
+  },
+  {
+    "departports": "Bahamas (Any Port)"
+  },
+  {
+    "departports": "Balboa, Panama"
+  },
+  {
+    "departports": "Baltimore, MD"
+  },
+  {
+    "departports": "Barbados"
+  },
+  {
+    "departports": "Barcelona, Spain"
+  },
+  {
+    "departports": "Bari, Italy"
+  },
+  {
+    "departports": "Bayonne, NJ"
+  },
+  {
+    "departports": "Belfast, Northern Ireland"
+  },
+  {
+    "departports": "Benoa, Bali, Indonesia"
+  },
+  {
+    "departports": "Bergen, Norway"
+  },
+  {
+    "departports": "Bermuda (Any Port)"
+  },
+  {
+    "departports": "Bilbao, Spain"
+  },
+  {
+    "departports": "Bombay (Mumbai), India"
+  },
+  {
+    "departports": "Bordeaux, France"
+  },
+  {
+    "departports": "Boston, MA"
+  },
+  {
+    "departports": "Brazil (Any Port)"
+  },
+  {
+    "departports": "Brindisi, Italy"
+  },
+  {
+    "departports": "Brisbane, Australia"
+  },
+  {
+    "departports": "Broome, Australia"
+  },
+  {
+    "departports": "Buenos Aires, Argentina"
+  },
+  {
+    "departports": "Cairns, Australia"
+  },
+  {
+    "departports": "California (Any Port)"
+  },
+  {
+    "departports": "Canada (Any Port)"
+  },
+  {
+    "departports": "Canary Islands (Any Port), Spanish Territory"
+  },
+  {
+    "departports": "Cannes, France"
+  },
+  {
+    "departports": "Cape Town, South Africa"
+  },
+  {
+    "departports": "Cartagena, Colombia"
+  },
+  {
+    "departports": "Charleston, SC"
+  },
+  {
+    "departports": "China (Any Port)"
+  },
+  {
+    "departports": "Colombia (Any Port)"
+  },
+  {
+    "departports": "Colon, Panama"
+  },
+  {
+    "departports": "Copenhagen, Denmark"
+  },
+  {
+    "departports": "Costa Rica (Any Port)"
+  },
+  {
+    "departports": "Cozumel, Mexico"
+  },
+  {
+    "departports": "Croatia (Any Port)"
+  },
+  {
+    "departports": "Curacao"
+  },
+  {
+    "departports": "Dakar, Senegal"
+  },
+  {
+    "departports": "Darwin, Australia"
+  },
+  {
+    "departports": "Doha, Qatar"
+  },
+  {
+    "departports": "Dominican Republic"
+  },
+  {
+    "departports": "Dover, England"
+  },
+  {
+    "departports": "Dubai, United Arab Emirates"
+  },
+  {
+    "departports": "Dublin, Ireland"
+  },
+  {
+    "departports": "Dubrovnik, Croatia"
+  },
+  {
+    "departports": "Dunedin (Port Chalmers), New Zealand"
+  },
+  {
+    "departports": "Durban, South Africa"
+  },
+  {
+    "departports": "Ecuador (Any Port)"
+  },
+  {
+    "departports": "Egypt (Any Port)"
+  },
+  {
+    "departports": "Ephesus / Kusadasi, Turkey"
+  },
+  {
+    "departports": "Fiji"
+  },
+  {
+    "departports": "Florence / Pisa (Livorno), Italy"
+  },
+  {
+    "departports": "Florida (Any Port)"
+  },
+  {
+    "departports": "Fort Lauderdale, FL"
+  },
+  {
+    "departports": "Fort-de-France, Martinique"
+  },
+  {
+    "departports": "France (Any Port)"
+  },
+  {
+    "departports": "Fuerte Amador, Panama"
+  },
+  {
+    "departports": "Funchal, Madeira, Portugal"
+  },
+  {
+    "departports": "Galveston, TX"
+  },
+  {
+    "departports": "Genoa, Italy"
+  },
+  {
+    "departports": "Glasgow, Scotland"
+  },
+  {
+    "departports": "Grand Canary Island, Canary Islands"
+  },
+  {
+    "departports": "Greece (Any Port)"
+  },
+  {
+    "departports": "Greenland (Any Port)"
+  },
+  {
+    "departports": "Guadeloupe"
+  },
+  {
+    "departports": "Haifa, Israel"
+  },
+  {
+    "departports": "Halifax, NS, Canada"
+  },
+  {
+    "departports": "Hamburg, Germany"
+  },
+  {
+    "departports": "Hamilton, Bermuda"
+  },
+  {
+    "departports": "Helsinki, Finland"
+  },
+  {
+    "departports": "Hobart, Tasmania, Australia"
+  },
+  {
+    "departports": "Hong Kong"
+  },
+  {
+    "departports": "Honolulu, Oahu, HI"
+  },
+  {
+    "departports": "Iceland (Any Port)"
+  },
+  {
+    "departports": "India (Any Port)"
+  },
+  {
+    "departports": "Indonesia (Any Port)"
+  },
+  {
+    "departports": "Ireland (Any Port)"
+  },
+  {
+    "departports": "Israel (Any Port)"
+  },
+  {
+    "departports": "Istanbul, Turkey"
+  },
+  {
+    "departports": "Itajai, Brazil"
+  },
+  {
+    "departports": "Italy (Any Port)"
+  },
+  {
+    "departports": "Jacksonville, FL"
+  },
+  {
+    "departports": "Jamaica (Any Port)"
+  },
+  {
+    "departports": "Japan (Any Port)"
+  },
+  {
+    "departports": "Jeddah, Saudi Arabia"
+  },
+  {
+    "departports": "Juneau, AK"
+  },
+  {
+    "departports": "Kangerlussuaq, Greenland"
+  },
+  {
+    "departports": "Kiel, Germany"
+  },
+  {
+    "departports": "King George Island"
+  },
+  {
+    "departports": "Kirkenes, Norway"
+  },
+  {
+    "departports": "Kobe, Japan"
+  },
+  {
+    "departports": "Kyoto, Japan"
+  },
+  {
+    "departports": "La Romana, Dominican Republic"
+  },
+  {
+    "departports": "Laem Chabang, Thailand"
+  },
+  {
+    "departports": "Lanzarote, Canary Islands"
+  },
+  {
+    "departports": "Las Palmas, Grand Canary Island, Canary Islands"
+  },
+  {
+    "departports": "Lautoka, Fiji"
+  },
+  {
+    "departports": "Lima (Callao), Peru"
+  },
+  {
+    "departports": "Limassol, Cyprus"
+  },
+  {
+    "departports": "Lisbon, Portugal"
+  },
+  {
+    "departports": "Liverpool, England"
+  },
+  {
+    "departports": "London, England"
+  },
+  {
+    "departports": "Longyearbyen, Spitsbergen, Norway"
+  },
+  {
+    "departports": "Los Angeles, CA"
+  },
+  {
+    "departports": "Luxor (Safaga), Egypt"
+  },
+  {
+    "departports": "Maceio, Brazil"
+  },
+  {
+    "departports": "Madagascar (Any Port)"
+  },
+  {
+    "departports": "Mahe, Seychelles"
+  },
+  {
+    "departports": "Malaga, Spain"
+  },
+  {
+    "departports": "Malaysia (Any Port)"
+  },
+  {
+    "departports": "Maldives (Any Port)"
+  },
+  {
+    "departports": "Malta (Any Port)"
+  },
+  {
+    "departports": "Manaus, Brazil"
+  },
+  {
+    "departports": "Marseille, France"
+  },
+  {
+    "departports": "Melbourne, Australia"
+  },
+  {
+    "departports": "Messina, Sicily, Italy"
+  },
+  {
+    "departports": "Miami, FL"
+  },
+  {
+    "departports": "Milwaukee, WI"
+  },
+  {
+    "departports": "Mobile, AL"
+  },
+  {
+    "departports": "Mombasa, Kenya"
+  },
+  {
+    "departports": "Monte Carlo, Monaco"
+  },
+  {
+    "departports": "Montego Bay, Jamaica"
+  },
+  {
+    "departports": "Montevideo, Uruguay"
+  },
+  {
+    "departports": "Montreal, QC, Canada"
+  },
+  {
+    "departports": "Muscat, Oman"
+  },
+  {
+    "departports": "Naples, Italy"
+  },
+  {
+    "departports": "Nassau, Bahamas"
+  },
+  {
+    "departports": "New Orleans, LA"
+  },
+  {
+    "departports": "New York, NY"
+  },
+  {
+    "departports": "New Zealand (Any Port)"
+  },
+  {
+    "departports": "Nice, France"
+  },
+  {
+    "departports": "Norfolk, VA"
+  },
+  {
+    "departports": "Norway (Any Port)"
+  },
+  {
+    "departports": "Olbia, Italy"
+  },
+  {
+    "departports": "Oporto (Leixoes), Portugal"
+  },
+  {
+    "departports": "Osaka, Japan"
+  },
+  {
+    "departports": "Oslo, Norway"
+  },
+  {
+    "departports": "Palermo, Sicily, Italy"
+  },
+  {
+    "departports": "Palma de Mallorca, Spain"
+  },
+  {
+    "departports": "Panama City, Panama"
+  },
+  {
+    "departports": "Papeete, Tahiti"
+  },
+  {
+    "departports": "Paris (Le Havre), France"
+  },
+  {
+    "departports": "Perth (Fremantle), Australia"
+  },
+  {
+    "departports": "Peru (Any Port)"
+  },
+  {
+    "departports": "Petra (Aqaba), Jordan"
+  },
+  {
+    "departports": "Phuket, Thailand"
+  },
+  {
+    "departports": "Pointe-a-Pitre, Guadeloupe"
+  },
+  {
+    "departports": "Port Canaveral, FL"
+  },
+  {
+    "departports": "Port Louis, Mauritius"
+  },
+  {
+    "departports": "Port Williams, Chile"
+  },
+  {
+    "departports": "Portland, ME"
+  },
+  {
+    "departports": "Portsmouth, England"
+  },
+  {
+    "departports": "Portugal (Any Port)"
+  },
+  {
+    "departports": "Providence, RI"
+  },
+  {
+    "departports": "Puerto Caldera, Costa Rica"
+  },
+  {
+    "departports": "Puerto Rico (Any Port)"
+  },
+  {
+    "departports": "Punta Arenas, Chile"
+  },
+  {
+    "departports": "Puntarenas, Costa Rica"
+  },
+  {
+    "departports": "Quebec City, QC, Canada"
+  },
+  {
+    "departports": "Quito, Ecuador"
+  },
+  {
+    "departports": "Ravenna, Italy"
+  },
+  {
+    "departports": "Recife, Brazil"
+  },
+  {
+    "departports": "Reykjavik, Iceland"
+  },
+  {
+    "departports": "Rio de Janeiro, Brazil"
+  },
+  {
+    "departports": "Rome (Civitavecchia), Italy"
+  },
+  {
+    "departports": "Rotterdam, Holland"
+  },
+  {
+    "departports": "Russian Waterways"
+  },
+  {
+    "departports": "Salvador, Brazil"
+  },
+  {
+    "departports": "San Antonio, Chile"
+  },
+  {
+    "departports": "San Diego, CA"
+  },
+  {
+    "departports": "San Francisco, CA"
+  },
+  {
+    "departports": "San Jose, Costa Rica"
+  },
+  {
+    "departports": "San Juan, Puerto Rico"
+  },
+  {
+    "departports": "Santa Cruz, Tenerife, Canary Islands"
+  },
+  {
+    "departports": "Santiago (Any Port), Chile"
+  },
+  {
+    "departports": "Sao Paulo (Santos), Brazil"
+  },
+  {
+    "departports": "Savona, Italy"
+  },
+  {
+    "departports": "Scotland (Any Port)"
+  },
+  {
+    "departports": "Seattle, WA"
+  },
+  {
+    "departports": "Seville, Spain"
+  },
+  {
+    "departports": "Shanghai, China"
+  },
+  {
+    "departports": "Sicily (Any Port)"
+  },
+  {
+    "departports": "Singapore"
+  },
+  {
+    "departports": "Sitka, AK"
+  },
+  {
+    "departports": "Sokhna, Egypt"
+  },
+  {
+    "departports": "South Africa (Any Port)"
+  },
+  {
+    "departports": "Southampton, England"
+  },
+  {
+    "departports": "Spain (Any Port)"
+  },
+  {
+    "departports": "Spitsbergen, Norway"
+  },
+  {
+    "departports": "Split, Croatia"
+  },
+  {
+    "departports": "St. Lucia"
+  },
+  {
+    "departports": "St. Maarten"
+  },
+  {
+    "departports": "St. Martin"
+  },
+  {
+    "departports": "St. Thomas, U.S. Virgin Islands"
+  },
+  {
+    "departports": "Stockholm, Sweden"
+  },
+  {
+    "departports": "Sweden (Any Port)"
+  },
+  {
+    "departports": "Sydney, Australia"
+  },
+  {
+    "departports": "Tahiti, French Polynesia"
+  },
+  {
+    "departports": "Taipei (Keelung), Taiwan"
+  },
+  {
+    "departports": "Tampa, FL"
+  },
+  {
+    "departports": "Taranto, Italy"
+  },
+  {
+    "departports": "Tasmania (Any Port), Australia"
+  },
+  {
+    "departports": "Tema, Ghana"
+  },
+  {
+    "departports": "Tenerife, Canary Islands"
+  },
+  {
+    "departports": "Thailand (Any Port)"
+  },
+  {
+    "departports": "Tianjin, China"
+  },
+  {
+    "departports": "Tokyo, Japan"
+  },
+  {
+    "departports": "Toronto, ON, Canada"
+  },
+  {
+    "departports": "Toulon, France"
+  },
+  {
+    "departports": "Trieste, Italy"
+  },
+  {
+    "departports": "Tromso, Norway"
+  },
+  {
+    "departports": "Trondheim, Norway"
+  },
+  {
+    "departports": "Turkey (Any Port)"
+  },
+  {
+    "departports": "United States (Any Port)"
+  },
+  {
+    "departports": "Ushuaia, Argentina"
+  },
+  {
+    "departports": "Valencia, Spain"
+  },
+  {
+    "departports": "Valletta, Malta"
+  },
+  {
+    "departports": "Valparaiso, Chile"
+  },
+  {
+    "departports": "Vancouver, BC, Canada"
+  },
+  {
+    "departports": "Venice, Italy"
+  },
+  {
+    "departports": "Victoria, Seychelles"
+  },
+  {
+    "departports": "Warnemunde, Germany"
+  },
+  {
+    "departports": "Yucatan Mexico (Any Port)"
+  },
+  {
+    "departports": "Zeebrugge, Belgium"
+  }
+]

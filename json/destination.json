@@ -1,54 +1,143 @@
-[{
-  "_id": {
-    "$oid": "667c045d1525e9b26d3aa1f1"
+[
+  {
+    "destination": "Africa"
   },
-  "destination": [
-    "Africa",
-    "Alaska",
-    "Alaska Cruise & Land Tour",
-    "Antarctica",
-    "Arctic",
-    "Asia",
-    "Asia Cruise & Land Tour",
-    "Australia & New Zealand",
-    "Australia & New Zealand Cruise & Land Tour",
-    "Bahamas",
-    "Baltic",
-    "Bermuda",
-    "British Isles",
-    "Canary Islands",
-    "Caribbean (All)",
-    "Caribbean (Eastern)",
-    "Caribbean (Southern)",
-    "Caribbean (Western)",
-    "Eastern Canada & New England",
-    "Eastern Canada & New England Cruise & Land Tour",
-    "Europe (All)",
-    "Europe Cruise & Land Tour",
-    "Galapagos",
-    "Great Lakes",
-    "Greek Islands",
-    "Hawaii",
-    "Indian Ocean",
-    "Mediterranean (All)",
-    "Mediterranean (Eastern)",
-    "Mediterranean (Western) & Atlantic Islands",
-    "Mexico & Central America",
-    "Middle East",
-    "Northern Europe",
-    "Northwest Passage",
-    "Norway",
-    "Pacific U.S. & Canada",
-    "Pacific U.S. & Mexico",
-    "Panama Canal",
-    "Repositioning",
-    "South America",
-    "South America Cruise & Land Tour",
-    "Southeast Asia Islands",
-    "Tahiti & South Pacific Islands",
-    "Transatlantic",
-    "Transpacific",
-    "United States (excluding Alaska & Hawaii)",
-    "World"
-  ]
-}]
+  {
+    "destination": "Alaska"
+  },
+  {
+    "destination": "Alaska Cruise & Land Tour"
+  },
+  {
+    "destination": "Antarctica"
+  },
+  {
+    "destination": "Arctic"
+  },
+  {
+    "destination": "Asia"
+  },
+  {
+    "destination": "Asia Cruise & Land Tour"
+  },
+  {
+    "destination": "Australia & New Zealand"
+  },
+  {
+    "destination": "Australia & New Zealand Cruise & Land Tour"
+  },
+  {
+    "destination": "Bahamas"
+  },
+  {
+    "destination": "Baltic"
+  },
+  {
+    "destination": "Bermuda"
+  },
+  {
+    "destination": "British Isles"
+  },
+  {
+    "destination": "Canary Islands"
+  },
+  {
+    "destination": "Caribbean (All)"
+  },
+  {
+    "destination": "Caribbean (Eastern)"
+  },
+  {
+    "destination": "Caribbean (Southern)"
+  },
+  {
+    "destination": "Caribbean (Western)"
+  },
+  {
+    "destination": "Eastern Canada & New England"
+  },
+  {
+    "destination": "Eastern Canada & New England Cruise & Land Tour"
+  },
+  {
+    "destination": "Europe (All)"
+  },
+  {
+    "destination": "Europe Cruise & Land Tour"
+  },
+  {
+    "destination": "Galapagos"
+  },
+  {
+    "destination": "Great Lakes"
+  },
+  {
+    "destination": "Greek Islands"
+  },
+  {
+    "destination": "Hawaii"
+  },
+  {
+    "destination": "Indian Ocean"
+  },
+  {
+    "destination": "Mediterranean (All)"
+  },
+  {
+    "destination": "Mediterranean (Eastern)"
+  },
+  {
+    "destination": "Mediterranean (Western) & Atlantic Islands"
+  },
+  {
+    "destination": "Mexico & Central America"
+  },
+  {
+    "destination": "Middle East"
+  },
+  {
+    "destination": "Northern Europe"
+  },
+  {
+    "destination": "Northwest Passage"
+  },
+  {
+    "destination": "Norway"
+  },
+  {
+    "destination": "Pacific U.S. & Canada"
+  },
+  {
+    "destination": "Pacific U.S. & Mexico"
+  },
+  {
+    "destination": "Panama Canal"
+  },
+  {
+    "destination": "Repositioning"
+  },
+  {
+    "destination": "South America"
+  },
+  {
+    "destination": "South America Cruise & Land Tour"
+  },
+  {
+    "destination": "Southeast Asia Islands"
+  },
+  {
+    "destination": "Tahiti & South Pacific Islands"
+  },
+  {
+    "destination": "Transatlantic"
+  },
+  {
+    "destination": "Transpacific"
+  },
+  {
+    "destination": "United States (excluding Alaska & Hawaii)"
+  },
+  {
+    "destination": "World"
+  }
+]

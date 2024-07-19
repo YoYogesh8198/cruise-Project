@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             );
             $result = $client->executeBulkWrite('cruiseTable.details', $insert);
             if ($result) {
-                $response = array("success" => true, "message" => "Form Submitted Successfully");
+                $response = array("success" => true, "message" => "✔ successfully Submitted ");
             }
         }
     } catch (\Throwable $th) {
