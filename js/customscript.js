@@ -84,9 +84,9 @@ $(function () {
 
       // Set the value of the input field
       $(this).val(
-        picker.startDate.format("MMM DD ,YY") +
+        picker.startDate.format("MMM DD, YYYY") +
           " - " +
-          picker.endDate.format("MMM DD ,YY")
+          picker.endDate.format("MMM DD, YYYY")
       );
     });
 });
@@ -110,6 +110,3 @@ document.getElementById("pop_up").addEventListener("click", function () {
     image.classList.add("rotate");
   }
 });
-
-
-

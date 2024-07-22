@@ -1,51 +1,4 @@
-<?php
-// $client = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-// $database = 'cruiseTable';
-// $destination = 'destination';
-// $cruiseLength = 'cruiseLength';
-// $cruiselineData = 'cruiselineData';
-// $departure_ports = 'departure_ports';
-// $TopCruiseLine = 'TopCruiseLine';
-// $popularDestination = 'popularDestination';
-// $departPortGreatCruise = 'departPortswithGreat';
-// $findBestCruiseQA = 'findBestCruiseQA';
-// $details = 'details';
 
-// $query = new MongoDB\Driver\Query([]);
-// $destination_a = $client->executeQuery("$database.$destination", $query);
-// $cruiseLength_a = $client->executeQuery("$database.$cruiseLength", $query);
-// $TopCruiseLine_a = $client->executeQuery("$database.$TopCruiseLine", $query);
-// $popularDestination_a = $client->executeQuery("$database.$popularDestination", $query);
-// $departPortGreatCruise_a = $client->executeQuery("$database.$departPortGreatCruise", $query);
-// $findBestCruiseQA_a = $client->executeQuery("$database.$findBestCruiseQA", $query);
-// $cruiselineData_a = $client->executeQuery("$database.$cruiselineData", $query)->toArray();
-// $departure_ports_a = $client->executeQuery("$database.$departure_ports", $query)->toArray();
-// $details_a = $client->executeQuery("$database.$details", $query)->toArray();
-
-
-// $results = [];
-// foreach ($destination_a as $document) {
-//     $results['destination'] = $document;
-// }
-// foreach ($cruiseLength_a as $document) {
-//     $results['cruiseLength'] = $document;
-// }
-// foreach ($departure_ports_a as $document) {
-//     $results['departure_ports'] = $document;
-// }
-// $results['cruiseshipLineData'] = [];
-// $results['cruiseshipLineData'] = $cruiselineData_a;
-// $results['TopcruiseLine'] = $TopCruiseLine_a->toArray();
-// $results['popularDestination'] = $popularDestination_a->toArray();
-// $results['departPortGreatCruise'] = $departPortGreatCruise_a->toArray();
-// $results['findBestCruiseQA'] = $findBestCruiseQA_a->toArray();
-// $results['details'] = $details_a;
-// // var_dump($results['cruiseshipLineData']->cruisename);
-
-// $destinationData = $results['destination']->destination;
-// $cruiseLengthData = $results['cruiseLength']->cruiseLength;
-// $departure_portsData = $results['departure_ports']->departure_ports;
-?> 
 <?php
 require 'vendor/autoload.php';
 
@@ -234,28 +187,6 @@ class monogd
 }
 
 
-// $mongo = new monogd();
-
-// // Data to be inserted
-// $dataToInsert = array(
-//     array(
-//         'uniqueId' => '12345',
-//         'name' => 'John Doe',
-//         'email' => 'johndoe@example.com',
-//         'number' => '1234567890',
-//         'travelers' => 2,
-//         'destination' => 'Caribbean',
-//         'cruise_length' => 7,
-//         'depart' => '2023-02-20',
-//         'return' => '2023-02-27',
-//         'cruise_line' => 'Royal Caribbean',
-//         'cruise_ship' => 'Symphony of the Seas',
-//         'departure_port' => 'Miami'
-//     )
-// );
-
-// // Call the details function to insert data
-// $mongo->details($dataToInsert, 3);
 
 ?>
 
