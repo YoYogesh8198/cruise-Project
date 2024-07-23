@@ -62,6 +62,11 @@ function show_name(value) {
   } else {
     $("#name").css("border", "1px solid #ced4da");
   }
+
+  if ($("#name").val().length != 0) {
+    $("#name").css("border", "1px solid #ced4da");
+    $(".error1").hide();
+  }
 }
 
 //! function for check email value..
@@ -76,6 +81,12 @@ function checkEmail(value) {
     $("#email").css("border", "1px solid #ced4da");
   }
 }
+// function checkdate(value) {
+//   console.log(value);
+//   if ($("#depart_date").val().length != 0) {
+//     $(".error7").hide();
+//   }
+// }
 
 //! function for check mobile value..
 function checkValidateMobile(input) {
@@ -108,6 +119,12 @@ $(document).ready(function () {
     var cruise_line = $("#cruise-line").val();
     var cruise_ship = $("#cruise-ship").val();
     var departure_port = $("#departure-port").val();
+    var img = $("<img>", {
+      width: 20,
+      height: 20,
+      src: "https://img.icons8.com/tiny-color/25/error.png",
+      alt: "error",
+    });
     console.log(
       name,
       phone_number,
@@ -128,8 +145,12 @@ $(document).ready(function () {
       $("#name").css("border", "1px solid red");
       $(".error1").show();
       $("#name").focus();
+      // $(".label").css('color','red');
       ErrorMsg = true;
       return false;
+    } else if ($("#name").val().length) {
+      $("#name").css("border", "1px solid #ced4da");
+      $(".error1").hide();
     } else {
       $("#name").css("border", "1px solid #ced4da");
       $(".error1").hide();
@@ -143,7 +164,9 @@ $(document).ready(function () {
       return false;
     } else if (emailRegex.test(email) === false) {
       $("#email").css("border", "1px solid red");
-      $(".error2").text("Please Enter Correct Email");
+      var span = $('<span>').append(img).append(' Please Enter Correct Email.');
+      $(".error2").html(span);
+      $("#email").focus();
       ErrorMsg = true;
       return false;
     } else {
@@ -220,8 +243,9 @@ $(document).ready(function () {
       ErrorMsg = true;
       return false;
     } else {
-      $("#depart").val(depart_date.slice(0, 10));
-      $("#return").val(depart_date.slice(13));
+      $("#depart").val(depart_date.slice(0, 12));
+      // $("#depart").val($('#depart_date').slice(0, 12));
+      $("#return").val(depart_date.slice(15));
       $("#depart_date").css("border", "1px solid #ced4da");
       $(".error7").hide();
     }

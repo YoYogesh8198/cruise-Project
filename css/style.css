@@ -2389,7 +2389,7 @@ p {
 
 /*  */
 .tooltip-error {
-  margin: 10px;
+  margin: 0px;
   background: #fff;
   border: 1px solid rgb(255, 0, 0);
   border-radius: 3px;
@@ -2397,15 +2397,16 @@ p {
   display: inline-block;
   font-family: monospace;
   font-size: 18px;
-  font-weight: 800;
+  /* font-weight: 800; */
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 9px;
+  padding: 5px;
   position: absolute;
-  top: 47px;
-  left: 13px;
+  top: 53px;
+  left: 12px;
   z-index: 50;
+  width: 286px;
 }
 .tooltip-error::after {
   background: #fff;
